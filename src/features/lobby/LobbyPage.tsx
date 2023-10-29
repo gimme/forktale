@@ -1,7 +1,14 @@
 import { Button, Container, Stack, TextField, Typography } from "@mui/material"
 import strings from "@/assets/strings"
+import { useNavigate } from "react-router-dom"
 
 export default function LobbyPage() {
+    const navigate = useNavigate()
+
+    const onClickCreate = () => {
+        navigate("/crossroads")
+    }
+
     return (
         <>
             <Container
@@ -30,7 +37,9 @@ export default function LobbyPage() {
                     <Button variant="outlined" disabled>
                         {strings.common.join}
                     </Button>
-                    <Button variant="contained">{strings.common.create}</Button>
+                    <Button variant="contained" onClick={onClickCreate}>
+                        {strings.common.create}
+                    </Button>
                 </Stack>
             </Container>
         </>
