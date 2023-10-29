@@ -1,0 +1,17 @@
+title: HARMAN BROOKS
+trigger: If Harman Brooks is in play and is not exiled
+context: '"No more shoveling trash or building barricades.  I need to get out
+  and do what I do best."'
+options:
+  - action: Harman goes hunting.
+    result: Harman lays flat on his platform, and feels it sway in the winter
+      wind.  He gazes down from his treetop vantage point at the specially laid
+      snare below, and steels himself for a long wait.  Add 3 food to the
+      supply.
+  - action: Harman goes looking for helpful plants.
+    result: Thorns snag at Harman's sleeves as he pushes through a thick tangle of
+      greenery.  After long hours he is beginning to give up hope, but then he
+      spots a promising sprout at the base of an old oak tree.  Kneeling, he
+      plucks a leaf and chews it.  Perfect!  Now if he can just collect several
+      dozen more plants, he might be able to make a decent salve.  Remove 1
+      wound from up to 3 survivors.

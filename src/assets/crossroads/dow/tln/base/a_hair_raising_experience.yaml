@@ -1,0 +1,20 @@
+title: A HAIR RAISING EXPERIENCE
+trigger: If any player scratches their hair or beard
+context: A remarkably dapper elderly man arrives at the colony half starved and
+  needing shelter. He offers to earn his keep using his barber skills. He also
+  points out how terrible you all look. Every player with 1 or more survivors at
+  the colony must vote with a thumbs up or down. The option with the most votes
+  takes effect.
+options:
+  - action: Allow the barber to join the colony.
+    result: Add a helpless survivor to the colony. Any non- exiled player with a
+      beard or with hair that is long enough to touch their shoulder, must
+      choose a survivor they control to be groomed by the barber. The old barber
+      shakes something fierce while wielding his straight razor. Roll 1 die for
+      each groomed survivor. If the roll is a 1, the chosen survivor takes a
+      wound. If the roll is 2-6, remove all despair tokens from the chosen
+      survivor.
+  - action: '"Sorry pops. Long hair helps keep the cold out. Maybe further down the
+      road."'
+    result: Nothing happens.
+vote: true

@@ -1,0 +1,21 @@
+title: BUDDY DAVIS
+trigger: If the player controls Buddy Davis and Buddy starts the turn in the colony
+context: "\"Listen up people!  This is a survival situation, and it behooves us
+  all to be in the best possible physical shape.  If you would please take a
+  moment to look at my perfectly sculpted arms.  Obviously this kind of
+  awesomeness isn't going to be possible for everyone.  These are some seriously
+  alpha male arms here.  But with a lot of hard work, and real determination, I
+  think all of you people could start to be a little more like me.  So starting
+  tomorrow morning before sunrise, I will be holding a series of intense
+  exercises.  I expect to see each and every one of you there, working your
+  butts off so that we can all be living in a colony full of winners.\""
+options:
+  - action: The colony begins an intense workout regimen that boosts productivity,
+      though it does increase food consumption.
+    result: For the remainder of the game, any player can place a food card from
+      their hand into the waste pile (without effect) at the beginning of a
+      round, to roll 1 extra action die during the roll action die step of that
+      round.
+  - action: Someone tosses an empty can at Buddy's head while he's busy showing off
+      his abdominal muscles.
+    result: The resulting uproarious laughter raises morale by 1.

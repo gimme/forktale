@@ -1,0 +1,20 @@
+title: THE THING BEHIND THE WALL
+trigger: If a player that has 2 or more cards in their hand performs a search at
+  Raxxon with a non-exiled survivor
+context: You regret finding the secret lab as you clamp a hand over your mouth.
+  The thing behind the glass leers at you. "They tried to kill me," it coos,
+  "but I ate them all, every tender bit." You retch as the thing caresses the
+  foul ruin that sheds from its bones. "You wonder if I can get out of here," it
+  growls. "Know that I made them each my lovers as well as my food. You too
+  shall know that joy."
+options:
+  - action: You run like hell.
+    result: Your bag snags on something and rips open, but you keep running. Shuffle
+      2 item cards from your hand into the Raxxon item deck.
+  - action: You look around the laboratory as the thing behind the glass screams
+      obscenities at you.
+    result: You find what looks like patient records. You learn that Raxxon was
+      doing human drug trials, and it appears that earlier versions of Zomoxtrin
+      caused irreversible insanity in human test subjects. Place 1 despair token
+      on the survivor that performed the search.
+mature: true

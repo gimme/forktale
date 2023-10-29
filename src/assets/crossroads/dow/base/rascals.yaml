@@ -1,0 +1,20 @@
+title: RASCALS
+trigger: If a survivor the player controls performs a search at the hospital
+context: The air from the storage room is cold, and at first your heart
+  sinks  aside from a stack of wooden pallets, the room is empty.  It certainly
+  isn't the trove of medical supplies you were hoping for.  But then you catch a
+  glimpse of metal behind the pallets, and walk around to investigate.   Sitting
+  there are four Rascal scooters.  A quick check shows they are all fully
+  charged, but a quick joyride down a hospital hallway forces you to admit the
+  scooters are garbage.  They couldn't even outrun a zombie.  Hmm.  Perhaps the
+  scooters can serve another kind of purpose?
+options:
+  - action: Yeah, sure!  You could take these back to the colony and have
+      races.  The fact that the scooters are so slow would just make the whole
+      thing hilarious!
+    result: Your hunch proves accurate, and the four hours of racing the batteries
+      provide raise morale by 1.  But the loud cheering also draws in the
+      dead.  Add 5 zombies to the colony.
+  - action: Hilarious?  Man, that's exactly the kind of stupid thinking that makes
+      everyone dislike me.
+    result: Nothing happens.

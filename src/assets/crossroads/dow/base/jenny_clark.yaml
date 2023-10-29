@@ -1,0 +1,20 @@
+title: JENNY CLARK
+trigger: If player performs a search with Jenny Clark and she is not exiled
+context: The jar of pennies crashes to the floor, glass shards and tarnished
+  coins spilling everywhere.  "Stupid pennies," Jenny mutters.  "Don't you know
+  I'm trying to be quiet?"  But when she turns away to search elsewhere, she
+  finds herself face to face with a zombie; it groans, cold, fetid air pushed
+  from the thing's mouth.  Yet to Jenny's surprise the zombie does not attack,
+  and in its one good eye she thinks she sees something akin to
+  kindness.  Behind the zombie, more corpses shuffle into the room.  "Aw, you
+  guys aren't all bad are you?" she says.  "Come on.  I know some people who are
+  going to want to meet you." The player to the left of the player controlling
+  Jenny must choose.
+options:
+  - action: "\"Hurry, open the gates!  Jenny's back but it looks like she's
+      surrounded by the dead!\""
+    result: Place Jenny at the colony.  Add 8 zombies to the colony.
+  - action: Peering through the rifle's scope he sees Jenny walking slowly down the
+      road, a group of dead in tow.  "Oh God," he mutters, slipping a finger
+      over the trigger.  "That ditz must have gotten herself bit."
+    result: Kill Jenny Clark.

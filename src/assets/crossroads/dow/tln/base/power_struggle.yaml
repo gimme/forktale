@@ -1,0 +1,27 @@
+title: POWER STRUGGLE
+trigger: If both Rosa Rodriguez and Nadia Rivers are in play and neither is exiled
+context: "\"I'm sick of this every-man-for-himself method for distributing
+  supplies around here! We need a leader that can be empowered to get stuff done
+  in an efficient manner,\" says Rosa. But Nadia scoffs. \"And I suppose you're
+  just the person for the job aren't you?\" she mocks. \"Rosa, what you are
+  talking about is a dictatorship.\" Every non-exiled player must vote with a
+  thumbs up or down. The option with the most votes takes effect."
+options:
+  - action: Vote for Rosa.
+    result: Rosa is elected leader of the colony. Things become more efficient but
+      at the cost of personal freedoms. Whenever a search is performed, the card
+      must be presented to the player that controls Rosa. That player then
+      decides who the card should go to and adds it to that player's hand or
+      keeps the card for herself, adding it to her own hand. All crisis cards
+      now require 1 fewer card matching the correct symbol to pass. If Rosa is
+      killed, remove this card from the game.
+  - action: Vote for Nadia.
+    result: "Nadia is elected leader and institutes a voting policy. At the
+      beginning of each round all non- exiled players must vote on the following
+      laws. If there is a majority vote for a law, that law is in effect for the
+      rest of the round. Law 1: All players must build at least 1 barricade on
+      their turn. Law 2; If at the beginning of a player's turn there are more
+      than 5 cards in the waste pile, that player must clean waste during their
+      turn. Law 3; All players must contribute at least 1 food during their turn
+      or reveal their hand showing they have no food cards."
+vote: true

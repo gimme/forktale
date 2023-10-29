@@ -1,0 +1,27 @@
+title: NADIA RIVERS
+trigger: If Nadia is in play, she is not exiled, and morale is lower than where
+  it started the game
+context: The colony gathers around as Nadia proclaims, "If we could get on the
+  same page about group responsibility we could avoid a lot of the nagging
+  problems that keep haunting us. I say we start voting on some of these
+  important issues and instate some rules of conduct based on our community
+  votes." Each non-exiled player must vote with a thumbs up or down. The option
+  with the most votes takes effect.
+options:
+  - action: Institute Nadia's town hall governing system.
+    result: "For the remainder of the game, at the beginning of each round, all
+      non-exiled players must vote on the following laws. If there is a majority
+      vote for a law, that law is in effect for the rest of the round. Law 1:
+      All players must build at least 1 barricade on their turn. Law 2; If at
+      the beginning of a player's turn there are more than 5 cards in the waste
+      pile, that player must clean waste during their turn. Law 3; All players
+      must contribute at least 1 food during their turn or reveal their hand to
+      show they have no food cards."
+  - action: Reject Nadia's town hall governing system.
+    result: Nothing happens.
+  - action: If Rosa Rodriguez is in play this option triggers instead.
+    result: "\"Nadia, why do you keep acting like your PC approach to decision
+      making didn't die along with the world? Things have gone medieval around
+      here. We need strong leadership.\" Search the crossroads deck and discard
+      pile for the 'Power Struggle' crossroads card and immediately trigger it."
+vote: true

@@ -1,0 +1,18 @@
+title: TRAFFIC VIOLATION
+trigger: If the player uses a <Fuel> card when moving a non-exiled survivor
+context: Your jaw drops when you see the flashing police lights in your rear
+  view mirror. This isn't going to end well.
+options:
+  - action: You stomp on the gas.
+    result: The cruiser easily catches up, ramming you hard. Your car careens into a
+      tree. Injured and dazed, you flee into the woods. Add 1 wound to the
+      moving survivor and then roll for exposure on that survivor.
+  - action: You pull over .
+    result: "\"Where did you get the fuel for this automobile?\" the uniformed
+      officer demands, gun drawn. He pulls you from the car and cuffs you. \"Let
+      your friends know we're coming to collect a tax for keeping these streets
+      safe,\" he says as he siphons your gas. For the remainder of the game,
+      during the add zombies step of the colony phase, add 1 fewer zombie to the
+      gas station, hospital, and police station. When this happens, a player may
+      remove 1 fuel in their hand from the game. If no player does, every
+      survivor at the colony receives 1 wound."

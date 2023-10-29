@@ -1,0 +1,17 @@
+title: COMPETITION FOR RESOURCES
+trigger: If a survivor the player controls makes noise while searching, after
+  the player looks at the cards, but before they select one to keep
+context: '"Hey, what was that?" demands a gruff voice from outside. You freeze
+  in place. How did they get so close without you hearing them? "Shhhh," another
+  voice cautions. "Over here," You hear broken glass crunching as someone on the
+  sidewalk draws nearer. The broken shadows of the strangers fall across the
+  room you crouch in, and you realize you have to choose quickly.'
+options:
+  - action: You grab all you can and run.
+    result: "\"Get some backup!\" an angry voice screams. Keep all cards being
+      looked at. Add 2 bandits to the searching survivor's location. Place the
+      searching survivor at a random location. Roll for exposure twice on that
+      survivor."
+  - action: Hide!
+    result: '"They must have run. Heh. But look  they left us presents." Place all
+      of the looked at cards at the bandit hideout.'

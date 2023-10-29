@@ -1,0 +1,18 @@
+title: ANITA WALLACE 3
+trigger: If the player contributes a card to the crisis and Anita is in play and
+  not exiled
+context: '"Every time something happens around here you all run around like
+  chickens with your heads cut off," laughs Anita. "I used to be in crisis
+  management and the key to these kinds of things is keeping a calm head and
+  developing a thorough plan."'
+options:
+  - action: "\"Well I'm not going to stand in the way of a pro,\" you say, and Anita
+      agrees to lead efforts against the current crisis."
+    result: Immediately carry out the fail effect of the Crisis. Place all of the
+      cards that were contributed to the Crisis into the hand of the player that
+      controls Anita. "What the hell happened?" you demand. "I don't need your
+      negativity," she says, and turns and walks away.
+  - action: '"Great Anita! You go ahead and take care of the situation then," you
+      say cheerily. When Anita walks away satisfied, you roll your eyes and
+      continue to find a resolution to the crisis at hand.'
+    result: Nothing happens.

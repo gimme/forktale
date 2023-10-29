@@ -1,0 +1,13 @@
+title: BOX OFFICE BASH
+trigger: If the DVD player is in play, and the player performs a search action
+  with one of their survivors
+context: "\"Hot Dang!\" you yell out. You are startled by the sound of your own
+  voice. It's amazing how long you go without talking on these scavenging
+  missions. You take a quick look around to make sure your shout didn't call the
+  attention of the dead, then look back down at your find. A box full of DVDs.
+  And they aren't just more of the 8-for-a-dollar bargain-bin garbage you've got
+  back at the colony. We're talking dinosaurs, robots, and. . . rom-coms? You
+  never thought you'd see the day you were so ecstatic to see some rom-coms. You
+  leave the horror movies behind."
+result: For the remainder of the game, when using the DVD Player to increase
+  morale, increase morale by 2 instead of 1.

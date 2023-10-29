@@ -1,0 +1,14 @@
+title: NO AMMO
+trigger: If the player uses the ability of a <Weapon> item card, after resolving
+  that ability
+context: "\"That's right you ugly freak,\" you snarl at the zombie who's head
+  you just blew off.  \"Plenty more where that came from!\"  You reach down to
+  your belt for another clip, only to remember you were on your last one.  \"Or
+  not,\" you say to yourself.  Looking over at the bloody ruin of the zombie,
+  you wish you had shown a little restraint."
+options:
+  - action: Toss the weapon.
+    result: Place the used weapon in the waste pile.
+  - action: Hunt down more ammunition.
+    result: Move all action dice from your unused action dice pool to your used
+      action dice pool.

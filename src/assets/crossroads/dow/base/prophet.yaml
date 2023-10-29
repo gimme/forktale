@@ -1,0 +1,17 @@
+title: PROPHET
+trigger: If an exiled survivor the player controls shares a location with a
+  non-exiled survivor
+context: You are minding your own business, fully immersed in His Work, when who
+  should you spy but one of the lost sheep belonging to that God-forsaken
+  colony?  You know what must be done.
+options:
+  - action: You approach the poor thing and speak of the sins the colony has
+      committed.  The sheep begins to weep, and confesses its shame.  You cradle
+      the pitiable thing in your arms, and promise everything will be okay.
+    result: Take a non-exiled survivor that shares a location with one of your
+      survivors and add them to your following.
+  - action: This is no sheep, but a goat.  You sneak up behind it, incapacitate it
+      with a brick, then set to branding its flesh.  When it returns to the
+      colony, your warnings will be there for everyone to see.
+    result: The colony loses 1 morale.
+noCoop: true

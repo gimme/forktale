@@ -1,0 +1,16 @@
+title: THE GUNFIGHTER
+trigger: If the player controls a survivor at a non-colony location equipped
+  with a <Weapon> item, and Alfonso Ortega is still in the survivor deck
+context: >-
+  The dead woman lunges into you, the weight of her putrid body knocking you
+  over, and your gun goes clattering across the ground. Panic seizes you as you
+  realize you will likely die. But suddenly a man sprints out from an alleyway,
+  snatches up your gun, takes aim, and pulls the trigger 
+
+  "No!" you scream, but his aim is perfect, and the dead woman's face explodes over your own. "Bendice esta arma, dulce Madre," the man whispers. You flip the corpse off you. %% "Hey man, thanks for the assist," you say. The man looks back at you with intense eyes.
+options:
+  - action: '"You need a place stay? Food?"'
+    result: Search the survivor deck for Alfonso Ortega and add him to your following.
+  - action: "\"So, uh, if I can have my gun, I'll be on my way.\""
+    result: The man just calmly turns and walks away. Remove the <Weapon> item from
+      the game.

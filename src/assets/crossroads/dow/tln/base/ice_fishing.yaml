@@ -1,0 +1,11 @@
+title: ICE FISHING
+trigger: If there is no food in the supply
+context: >-
+  "So we just cut a hole in the ice and stick the lures in there and, what?
+  Jiggle them around? Are you sure there isn't more to it than this?" you ask.
+  The old timer just laughs and shakes his head. 
+
+  "Well you're supposed to drink booze too, but seeing as the whiskey is reserved for medicine now, no, that's pretty much it." %% "Ice fishing sucks," you grumble. %% "That's why we drank," he replies.
+result: You may spend 1 action die to try your hand at ice fishing. Roll a die
+  to fish. If you roll a 4 or higher, add 3 food to the supply. If you roll a 1,
+  choose a survivor you control. The chosen survivor receives 1 frostbite wound.

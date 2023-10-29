@@ -1,0 +1,15 @@
+title: LEAVING THE PAST BEHIND
+trigger: If Hugo Valentine is in play, and the player controls a survivor, other
+  than Hugo, at the hospital
+context: >-
+  "Hey man, can we talk?" Hugo had asked back at the colony. "Sure," you had
+  said. "What's up?" 
+
+  "'I hear you're headed to the hospital. I, uh, was wondering if you could help me with something? I'd appreciate some serious discretion on this one." "Of course Hugo. What is it?" %% "I need some testosterone," he whispered, terrified to even ask. %% "Why on earth do you want. . ." and your voice trailed off as you suddenly saw Hugo again for the first time. "Oh wow," you whispered, embarrassed by your own navet.
+options:
+  - action: The character at the hospital can use a search action to automatically
+      collect testosterone for Hugo  a considerable supply in fact.
+    result: Remove all despair tokens from Hugo Valentine.
+  - action: "\"Hey man, I just. . . wow. Look, I'm fine with you people doing your
+      thing, you know? But let's keep it your thing and not mine.\""
+    result: Place a despair token on Hugo.

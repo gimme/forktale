@@ -1,0 +1,16 @@
+title: LOVER'S QUARREL
+trigger: If 2 human survivors the player controls share a non-colony location,
+  and they are the only 2 survivors at that location
+context: "\"I don't like how much time you've been spending with him.\"  \"You
+  can't be serious.  Not now.  The whole world has fallen to pieces, we're only
+  barely able to keep ourselves alive, and now you want to revisit your jealousy
+  issues?  Grow up.\""
+options:
+  - action: "\"Grow up?  I'm not the one using the end of the world to act like a
+      whore!  At least now I know just how low you'll let yourself sink!\""
+    result: Add 4 noise tokens to the location the lovers share.
+  - action: "\"It's not that I don't trust you.  It's him.  You haven't seen his
+      eyes follow you when you walk away.  C'mon.  Let's get away and I'll show
+      you just how grown up I am.\""
+    result: The lovers cannot attack, search or move for the remainder of this turn.
+mature: true

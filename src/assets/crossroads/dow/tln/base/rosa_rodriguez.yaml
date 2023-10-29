@@ -1,0 +1,23 @@
+title: ROSA RODRIGUEZ
+trigger: If Rosa is in play, she is not exiled, and morale is lower than where
+  it started the game
+context: Rosa stands and addresses the assembled colony. "We're screwed people.
+  Indecision is killing us. I've got ideas for how we can operate more
+  efficiently and in everyone's best interest. " Each non- exiled player must
+  vote with a thumbs up or down. The option with the most votes takes effect.
+options:
+  - action: Elect Rosa as the colony leader.
+    result: Things become more efficient but at the cost of personal freedoms.
+      Whenever a search is performed, the card must be presented to the player
+      that controls Rosa. That player then decides who the card should go to and
+      adds it to that player's hand or keeps the card for herself, adding it to
+      her own hand. All crisis cards now require 1 fewer card matching the
+      correct symbol(s) to pass.
+  - action: Reject Rosa's bid to become the colony leader.
+    result: Nothing happens.
+  - action: If Nadia Rivers is in play this option triggers instead.
+    result: Nadia stands up and demands, "Wait just a second Rosa! If we are going
+      to institute a rule of law around here, it should be done by committee."
+      Search the crossroads deck and discard pile for the 'Power Struggle'
+      crossroads card and immediately trigger it.
+vote: true
