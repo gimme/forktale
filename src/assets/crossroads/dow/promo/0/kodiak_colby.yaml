@@ -10,9 +10,11 @@ context: You cry out in terror as the zombie bear lumbers toward you, its
   hand up, before offering to teach you how to suckle at Nature's generous
   bosom.
 options:
-  - action: You run naked through the woods with your new friend, free perhaps for
+  - action:
+      You run naked through the woods with your new friend, free perhaps for
       the first time in your life.
-    result: Roll once for exposure. Search the survivor deck for Kodiak Colby and
+    result:
+      Roll once for exposure. Search the survivor deck for Kodiak Colby and
       add him to your following.
-  - action: "\"Man, I appreciate the save, but I'm not suckling at anything.\""
+  - action: '"Man, I appreciate the save, but I''m not suckling at anything."'
     result: The handsome man looks dejected and slouches away.  Nothing happens.

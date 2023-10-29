@@ -12,6 +12,7 @@ options:
   - action: Arthur tries to wrestle free of the kids.
     result: Add 2 wounds to Arthur.
   - action: Arthur fires his weapon into the tangle of small bodies.
-    result: The kids scatter, but he tastes warm blood on his lips.  Heaven help me,
+    result:
+      The kids scatter, but he tastes warm blood on his lips.  Heaven help me,
       he thinks.  I was wrong.  Things can never go back to the way they were.
       Lose 1 morale.

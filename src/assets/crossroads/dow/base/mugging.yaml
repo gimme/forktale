@@ -9,10 +9,12 @@ context: Rough hands grab you from behind, and your head is slammed into a
   either way."
 options:
   - action: Give in to the mugger's demands.
-    result: Give all but 1 card in your hand to the player who controls the exiled
+    result:
+      Give all but 1 card in your hand to the player who controls the exiled
       survivor.
   - action: Attempt to fight back.
-    result: Add 2 wounds to a survivor you control that shares a location with an
+    result:
+      Add 2 wounds to a survivor you control that shares a location with an
       exiled survivor.  Or, if you have a weapon, you may instead kill the
       exiled survivor and add only 1 wound to your survivor.
 noCoop: true

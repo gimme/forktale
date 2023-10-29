@@ -12,6 +12,7 @@ options:
     result: Remove Gia and all equipment attached to her from the game. Remove 1
       bandit from the location Gia was at.
   - action: Gia knees the man in the groin before punching him in the face.
-    result: '"How gorgeous am I now, bitch?" Place Gia at the colony. Do not roll
+    result:
+      '"How gorgeous am I now, bitch?" Place Gia at the colony. Do not roll
       for exposure. Add 1 bandit to each location.'
 mature: true

@@ -7,7 +7,8 @@ context: As you search through the school, you hear screaming and pounding at a
   notice the dead converging on him from behind.
 options:
   - action: You unlock the door and rescue the boy.
-    result: He runs past you and leaves you to deal with the zombies. Add John Price
+    result:
+      He runs past you and leaves you to deal with the zombies. Add John Price
       to your following.  Add 2 zombies to the school.
   - action: You decide to take advantage of the distraction and rush into the
       cafeteria, grabbing supplies, as the teenager's anguished screams echo

@@ -12,9 +12,11 @@ options:
     result: Immediately Exile the player that made the accusation.
   - action: The child is exiled from the colony.
     result: Remove 1 helpless survivor and lose 1 morale.
-  - action: If the colony votes for the thumbs down option, any player may choose to
+  - action:
+      If the colony votes for the thumbs down option, any player may choose to
       have this option trigger instead. "Monsters! I'll not leave her to die out
       there."
-    result: The player that chose to trigger this option must remove a survivor they
+    result:
+      The player that chose to trigger this option must remove a survivor they
       control and a helpless survivor from the game. No morale is lost.
 vote: true

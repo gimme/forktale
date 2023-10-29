@@ -5,7 +5,8 @@ context: '"These kids are just sick!" screams a woman from the school window.
   she shrieks.'
 options:
   - action: When she pauses to reload, you dash into the school.
-    result: Roll 4 dice for the crazed woman. Collect 2 dice for each survivor that
+    result:
+      Roll 4 dice for the crazed woman. Collect 2 dice for each survivor that
       is at the school and 2 dice for each <Weapon> card equipped to a survivor
       at the school. Roll the collected dice. If the total of your roll is equal
       to or higher than the crazed woman's roll, she has been defeated. Nothing

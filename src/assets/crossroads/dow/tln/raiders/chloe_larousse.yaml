@@ -8,11 +8,13 @@ context: Chloe is shaken awake. "What happened?" the others ask. "Those bastards
   following choice belongs to the player that controls Chloe.
 options:
   - action: Chloe breaks into the bandit hideout on her own.
-    result: Roll for exposure 5 times on Chloe. If she is still alive, the player
+    result:
+      Roll for exposure 5 times on Chloe. If she is still alive, the player
       that controls Chloe receives all of the cards that were just placed in the
       bandit hideout.
   - action: Chloe harangues the group into action.
-    result: Every player must roll for exposure once on one of their survivors. If
+    result:
+      Every player must roll for exposure once on one of their survivors. If
       their survivor isn't killed by the roll, each player selects 1 card from
       the Bandits' Hideout and places it into their hand. The player that
       controls Chloe cannot use the request action for the remainder of the

@@ -7,7 +7,8 @@ context: You see the pack of dogs roaming behind the buildings to your right,
   hear the excited yapping as they close in behind you.
 options:
   - action: Try to intimidate them.
-    result: The dogs attack. Roll 3 dice. Place 1 wound on the survivor that moved
+    result:
+      The dogs attack. Roll 3 dice. Place 1 wound on the survivor that moved
       for each die that is equal to or lower than that survivor's attack value.
       If that survivor is not killed, add 3 food to the supply.
   - action: Run!

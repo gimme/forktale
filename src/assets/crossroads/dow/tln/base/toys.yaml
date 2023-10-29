@@ -10,8 +10,9 @@ context: You quietly creep around the end-cap and peer down Aisle 5. You spot a
   "but I know some kids that would love these."
 options:
   - action: Drag the box back to the colony as gifts for the children.
-    result: Roll exposure on a survivor you control at the grocery store 3 times. If
+    result:
+      Roll exposure on a survivor you control at the grocery store 3 times. If
       that survivor is still alive, place it at the colony (this does not count
       as a move) and gain 1 morale.
-  - action: "\"Nah, I didn't come here for toys.\""
+  - action: '"Nah, I didn''t come here for toys."'
     result: Nothing happens.

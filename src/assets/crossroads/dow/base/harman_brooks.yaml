@@ -9,7 +9,8 @@ options:
       snare below, and steels himself for a long wait.  Add 3 food to the
       supply.
   - action: Harman goes looking for helpful plants.
-    result: Thorns snag at Harman's sleeves as he pushes through a thick tangle of
+    result:
+      Thorns snag at Harman's sleeves as he pushes through a thick tangle of
       greenery.  After long hours he is beginning to give up hope, but then he
       spots a promising sprout at the base of an old oak tree.  Kneeling, he
       plucks a leaf and chews it.  Perfect!  Now if he can just collect several

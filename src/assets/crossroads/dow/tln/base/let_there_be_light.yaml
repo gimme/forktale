@@ -3,12 +3,13 @@ trigger: If the player performs a search
 context: '"How are the lights on in this place?"'
 options:
   - action: Investigate.
-    result: You can't figure it out until discovering a maintenance hatch that leads
+    result:
+      You can't figure it out until discovering a maintenance hatch that leads
       to the roof. Up on top you find two rows of solar panels that appear to be
       in excellent condition. You have to get word to the colony! Players may
       collectively spend 5 action dice. If they do, the solar panels are
       installed at the colony, providing heat and light. Raise morale by 1 and
       for the remainder of the game crisis cards requiring <Fuel> symbols
       require 2 fewer <Fuel> symbols to succeed.
-  - action: "\"Stop asking questions and let's just take advantage of it.\""
+  - action: '"Stop asking questions and let''s just take advantage of it."'
     result: Draw and keep 3 cards from the item deck you just searched.

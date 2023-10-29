@@ -1,6 +1,6 @@
 title: LUCKY LUKE SMITH
 trigger: If there is at least 1 helpless survivor at the colony
-context: "\"I'm not helpless! I'll stay close, I promise.\""
+context: '"I''m not helpless! I''ll stay close, I promise."'
 result: >-
   Remove 1 helpless survivor from the game.  Attach this card to a survivor you
   control, it gains the following ability: 

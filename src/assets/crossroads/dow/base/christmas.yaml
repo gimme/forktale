@@ -1,13 +1,14 @@
 title: CHRISTMAS
 trigger: If a survivor the player controls is at the colony
-context: "\"I was talking to a couple other people, and well, we think tomorrow
-  might be Christmas.  Maybe it's a stupid thing to hold onto, but I think
+context: '"I was talking to a couple other people, and well, we think tomorrow
+  might be Christmas.  Maybe it''s a stupid thing to hold onto, but I think
   people could use a distraction.  What if we made dinner for everyone?  A real
-  dinner, I mean.\"  Every player with 1 or more survivors at the colony must
-  vote with a thumbs up or down.  The option with the most votes takes effect."
+  dinner, I mean."  Every player with 1 or more survivors at the colony must
+  vote with a thumbs up or down.  The option with the most votes takes effect.'
 options:
   - action: Celebrate Christmas.
-    result: Spend 5 food. Gain 1 morale. If Forest Plum is in play and isn't exiled,
+    result:
+      Spend 5 food. Gain 1 morale. If Forest Plum is in play and isn't exiled,
       the player that controls Forest Plum may draw up to 4 cards from the
       Grocery Store deck. He must reveal them and give each of them to another
       player of his choice.

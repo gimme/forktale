@@ -1,12 +1,12 @@
 title: HUGO VALENTINE
 trigger: If the player is at Raxxon Pharmaceuticals and Hugo Valentine is still
   in the survivor deck
-context: "\"Hey man, you don't want to go in there.\" You jump at hearing the
+context: '"Hey man, you don''t want to go in there." You jump at hearing the
   voice of young man dressed like a bicycle courier  you never even heard him
-  ride up. \"I was here man, you know, when it all went down\" he shakes his
-  head solemnly. \"That place is ground zero, you know what I'm saying? I never
-  even got to deliver my final parcel.\" He pats a bulging vinyl bag that sits
-  on the back of his bike."
+  ride up. "I was here man, you know, when it all went down" he shakes his
+  head solemnly. "That place is ground zero, you know what I''m saying? I never
+  even got to deliver my final parcel." He pats a bulging vinyl bag that sits
+  on the back of his bike.'
 options:
   - action: You ask to inspect the parcel.
     result: Hugo seems hesitant, as if giving it away confirms the world has

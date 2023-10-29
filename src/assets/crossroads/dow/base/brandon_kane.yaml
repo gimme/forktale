@@ -15,5 +15,6 @@ options:
     result: Place 1 wound on Brandon and place him at the colony (this does not
       count as a move).
   - action: You do nothing.
-    result: Add the last 10 non-survivor and non-event cards that have been removed
+    result:
+      Add the last 10 non-survivor and non-event cards that have been removed
       from the game to the waste pile.

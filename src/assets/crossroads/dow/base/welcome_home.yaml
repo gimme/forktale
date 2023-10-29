@@ -10,11 +10,13 @@ context: Oh God.  This is the street your parent's lived on.  How changed is the
   father comes crawling down the stairs.
 options:
   - action: You dive for the gun and take aim.
-    result: You struggle to pull the trigger, but soon he's right on top of you, his
+    result:
+      You struggle to pull the trigger, but soon he's right on top of you, his
       hands scrabbling at your feet.  "I'm sorry Poppa."  Roll once for exposure
       on the moved survivor.  If the survivor isn't killed attach this card to
       it.  Once per round when this survivor performs an attack do not roll for
       exposure.
-  - action: You run out the house and don't look back.  There was no way you could
+  - action:
+      You run out the house and don't look back.  There was no way you could
       have shot him.
     result: Nothing happens.

@@ -14,7 +14,8 @@ options:
       If no survivors agree, the moving survivor cannot be moved. When moving a
       pair of survivors, instead of rolling exposure normally, roll for exposure
       twice and choose 1 result. Apply that result to both survivors.
-  - action: "\"That's an idea all right. Another is to play it smart when you leave
-      the colony.\""
+  - action:
+      '"That''s an idea all right. Another is to play it smart when you leave
+      the colony."'
     result: Nothing happens.
 vote: true

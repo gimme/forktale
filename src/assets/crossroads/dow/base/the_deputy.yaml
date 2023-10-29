@@ -9,8 +9,9 @@ context: A tap on the glass draws your attention, and you're startled to see
   station.  We'll give it to you, but you got to promise your people will keep
   the area clear for us.  Think you can do that?"
 options:
-  - action: "\"You give me the guns, I'll make sure we put them to good use.\""
-    result: "Reveal the top 8 cards of the Police Station item deck. Add any weapons
+  - action: '"You give me the guns, I''ll make sure we put them to good use."'
+    result:
+      "Reveal the top 8 cards of the Police Station item deck. Add any weapons
       from the revealed cards to your hand. Shuffle the rest of the cards back
       into the deck. Add the following victory condition to the current main
       objective, in addition to any victory conditions already listed:  There

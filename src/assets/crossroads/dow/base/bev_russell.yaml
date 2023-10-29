@@ -15,7 +15,8 @@ options:
       attacked, killed, or moved away from the school.  For the remainder of the
       game whenever a survivor is moved to the school that survivor receives 1
       wound (as Bev defends the children).
-  - action: The heat from the inferno radiates against Bev's back as she walks away
+  - action:
+      The heat from the inferno radiates against Bev's back as she walks away
       from the school, a tear rolling down her cheek.  "Rest in peace, my
       darling."
     result: Remove all item cards and zombies from the school.

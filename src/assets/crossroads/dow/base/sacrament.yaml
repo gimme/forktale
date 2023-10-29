@@ -5,7 +5,8 @@ context: You walk past the cathedral, and you realize that no one's been inside
   you can think of something that might be of use.
 options:
   - action: You mount the steps, and the heavy front door groans as you pull it open.
-    result: You spend fifteen minutes searching before you find a small room holding
+    result:
+      You spend fifteen minutes searching before you find a small room holding
       the prize you wanted  half a dozen bottles of Communion wine.  But as you
       move through the dark hallways towards the exit, a foul smelling shape
       slams into you.  The priest's corpse gnashes its teeth, nearly taking off

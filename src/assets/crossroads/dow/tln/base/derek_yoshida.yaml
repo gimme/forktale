@@ -1,18 +1,19 @@
 title: DEREK YOSHIDA
 trigger: If Derek is at the colony and there is no food in the supply
-context: "\"We're facing malnutrition,\" Derek says. \"Not enough protein in our
+context: '"We''re facing malnutrition," Derek says. "Not enough protein in our
   diets, and the variety of veggies we eat is poor. We need to invest in growing
-  our own wheat. It's a great source of protein and carbs, and it also stores
-  easy.\" Every non-exiled player must vote with a thumbs up or down. The option
-  with the most votes takes effect."
+  our own wheat. It''s a great source of protein and carbs, and it also stores
+  easy." Every non-exiled player must vote with a thumbs up or down. The option
+  with the most votes takes effect.'
 options:
-  - action: The colony bands together to find usable wheat and work the land around
+  - action:
+      The colony bands together to find usable wheat and work the land around
       the colony. It's hard work in the cold.
     result: The player who controls Derek rolls for exposure for him. Then he
       selects any two other non-exiled survivors and rolls exposure for them.
       Equip this card to Derek. Whenever Derek's player starts a turn, roll a
       die. On a roll of 6, remove 2 food cards from the waste pile and add 2
       food to the supply, or remove 2 starvation tokens from the supply.
-  - action: "\"There's still plenty of cans of creamed corn to go around.\""
+  - action: '"There''s still plenty of cans of creamed corn to go around."'
     result: Nothing happens.
 vote: true

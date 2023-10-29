@@ -1,10 +1,10 @@
 title: WAR
 trigger: If there are 6 or more bandits in play
-context: "\"This town can't support two communities, and those bastards are
+context: '"This town can''t support two communities, and those bastards are
   picking the place clean. If we truly mean to make a home here, and God knows
-  we've done everything we can, then it's time to fight. We can't keep battling
-  the dead as well as the living.\" Every non-exiled player votes with a thumbs
-  up or down. The option with the most votes takes effect."
+  we''ve done everything we can, then it''s time to fight. We can''t keep battling
+  the dead as well as the living." Every non-exiled player votes with a thumbs
+  up or down. The option with the most votes takes effect.'
 options:
   - action: Go to war.
     result: Roll a die for each non-helpless survivor and set successes aside. A

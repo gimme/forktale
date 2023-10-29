@@ -7,10 +7,10 @@ context: Whenever you notice something bright and colorful you almost feel
   the more you feel like a fool. No more. Caring seems as passe as color, and
   you're done with it.
 options:
-  - action: "\"I'm going off on my own for a while. Whatever happens, happens.\""
+  - action: '"I''m going off on my own for a while. Whatever happens, happens."'
     result: Take a survivor you control and shuffle it back into the survivor
       deck.  Remove the standee from the board.
-  - action: "\"I need a break.  Maybe it's time for a 'workplace injury'\"."
+  - action: '"I need a break.  Maybe it''s time for a ''workplace injury''".'
     result: Choose a survivor and roll the exposure die for them.  The chosen
       survivor suffers the result.  If the survivor receives a wound but is not
       killed, shuffle its card back into the survivor deck.  Remove its standee

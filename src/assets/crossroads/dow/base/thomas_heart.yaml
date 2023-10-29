@@ -8,11 +8,14 @@ context: Gunshots ring out like church bells greeting the morning.  This is
   choice belongs to the player who controls Thomas Heart.
 options:
   - action: Leave Thomas alone.
-    result: Thomas distributes 4 wounds to survivors who share his location. If no
+    result:
+      Thomas distributes 4 wounds to survivors who share his location. If no
       other survivors share Thomas's location, nothing happens.
-  - action: Players collectively remove 2 medicine cards in their hand from the game
+  - action:
+      Players collectively remove 2 medicine cards in their hand from the game
       to medicate Thomas.
-    result: Nothing Happens. If 2 medicines are not removed, carry out the effects
+    result:
+      Nothing Happens. If 2 medicines are not removed, carry out the effects
       of Option 1 instead.
-  - action: "\"He's a loose cannon. A liability. Kill him!\""
+  - action: '"He''s a loose cannon. A liability. Kill him!"'
     result: Kill Thomas.

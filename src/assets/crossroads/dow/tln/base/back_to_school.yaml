@@ -9,13 +9,16 @@ context: Through a set of open double doors you spot a raggedly dressed man
   school must vote with a thumbs up or down. The option that receives the most
   votes takes effect.
 options:
-  - action: "\"This isn't what it looks like!\" he insists.  \"So you aren't playing
-      school with a bunch of dead kids?\" Eric asks. You rush him as a group,
-      pushing him into the gnashing jaws of his victims."
-    result: Remove 1 despair token from each survivor at the school, roll exposure
+  - action:
+      '"This isn''t what it looks like!" he insists.  "So you aren''t playing
+      school with a bunch of dead kids?" Eric asks. You rush him as a group,
+      pushing him into the gnashing jaws of his victims.'
+    result:
+      Remove 1 despair token from each survivor at the school, roll exposure
       on each of those survivors, and place them in the colony (this is not a
       move).
-  - action: Another day, another reminder of human ugliness. You leave the disturbed
+  - action:
+      Another day, another reminder of human ugliness. You leave the disturbed
       man to his game.
     result: Place 1 despair token on each survivor at the school.
 vote: true

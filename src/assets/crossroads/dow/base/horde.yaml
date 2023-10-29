@@ -12,5 +12,6 @@ options:
   - action: You push on, doing your best to avoid them.
     result: Roll for exposure on that survivor 3 additional times.
   - action: Your goal is important, but so is not becoming one of them.
-    result: Place the survivor back at the location it was moving from (this does
+    result:
+      Place the survivor back at the location it was moving from (this does
       not count as a move). That survivor cannot be moved during this turn.

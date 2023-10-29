@@ -9,8 +9,10 @@ context: You don't know what you expected to find here at your cousin's house,
 options:
   - action: '"How good would some venison taste right now?"'
     result: Roll 4 dice, for every 3 or higher rolled add 1 food to the supply.
-  - action: '"We need to do something about this group that keeps raiding our best
+  - action:
+      '"We need to do something about this group that keeps raiding our best
       supply spots. I bet with this camo gear we could ambush them when we cross
       paths."'
-    result: For the remainder of the game, immediately after a bandit has been put
+    result:
+      For the remainder of the game, immediately after a bandit has been put
       into play, roll a die. On a result of 4+, remove that bandit from play.

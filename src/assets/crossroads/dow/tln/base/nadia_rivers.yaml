@@ -20,8 +20,8 @@ options:
   - action: Reject Nadia's town hall governing system.
     result: Nothing happens.
   - action: If Rosa Rodriguez is in play this option triggers instead.
-    result: "\"Nadia, why do you keep acting like your PC approach to decision
-      making didn't die along with the world? Things have gone medieval around
-      here. We need strong leadership.\" Search the crossroads deck and discard
-      pile for the 'Power Struggle' crossroads card and immediately trigger it."
+    result: '"Nadia, why do you keep acting like your PC approach to decision
+      making didn''t die along with the world? Things have gone medieval around
+      here. We need strong leadership." Search the crossroads deck and discard
+      pile for the ''Power Struggle'' crossroads card and immediately trigger it.'
 vote: true

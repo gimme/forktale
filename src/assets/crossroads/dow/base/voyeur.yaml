@@ -7,9 +7,11 @@ context: You watch them from your hiding space, taking note of all the choice
   to your benefit?  Look at the hand of the player who controls the other
   survivor at that location.
 options:
-  - action: You see something you covet.  You blackmail the survivor, threatening to
+  - action:
+      You see something you covet.  You blackmail the survivor, threatening to
       expose their secrets to the group.
-    result: Take a card of your choice from that player's hand.  Neither player can
+    result:
+      Take a card of your choice from that player's hand.  Neither player can
       talk about the card that was just taken.  It cannot be played until next
       round.
   - action: You reveal your findings to the colony.

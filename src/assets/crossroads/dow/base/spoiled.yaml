@@ -6,7 +6,8 @@ context: You stare at the can of stew, desperately hoping you're not seeing what
   dropped?  You're not in a rush to get botulism, but food isn't exactly
   plentiful around here.
 options:
-  - action: You shake your head.  "I'm sure it's fine.  I've got to stop being so
+  - action:
+      You shake your head.  "I'm sure it's fine.  I've got to stop being so
       paranoid."
     result: Choose a survivor you control and place a wound on it.  Proceed to
       increase the action die result.

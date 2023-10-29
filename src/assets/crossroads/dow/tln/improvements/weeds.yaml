@@ -12,7 +12,8 @@ options:
     result: Pay 1 food to remove a wound token from up to 2 survivors you do not
       control that have 2 or more wounds.
   - action: You harvest the plant and sell it to another group in the colony.
-    result: Name an item card. The first player with survivors at the colony to give
+    result:
+      Name an item card. The first player with survivors at the colony to give
       you the named card, removes all despair tokens from survivors they
       control. If no player can give you the named card, nothing happens.
 mature: true

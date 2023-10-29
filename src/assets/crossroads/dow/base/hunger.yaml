@@ -7,9 +7,11 @@ context: The new guy says, "Hey man, I appreciate the offer to join your colony,
 options:
   - action: You let Fat Earl into the colony.
     result: Fat Earl eats all the food.  Remove all of the food from your supply.
-  - action: You are starving and this guy is so big he can barely move.  It isn't
+  - action:
+      You are starving and this guy is so big he can barely move.  It isn't
       right.  You kill Fat Earl.
-    result: The new guy looks at the sandwich in his hands with disgust, the stale
+    result:
+      The new guy looks at the sandwich in his hands with disgust, the stale
       bun covering smoked, greasy meat that smells almost like
       pork.   Almost.  A tear runs down his face, and he whispers, "Always with
       me," before taking a bite.  Add 5 food to your supply, remove 1 helpless

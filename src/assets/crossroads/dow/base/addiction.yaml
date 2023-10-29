@@ -9,9 +9,11 @@ options:
   - action: You swallow the rest of the pills all at once and melt into a warm
       oblivion.
     result: Kill the survivor that the medicine was used on.  Do not reduce morale.
-  - action: You resist swallowing the rest of the pills all at once, but you know
+  - action:
+      You resist swallowing the rest of the pills all at once, but you know
       when the high subsides you'll need more.
-    result: Place this card under the survivor that the medicine was used on.  As
+    result:
+      Place this card under the survivor that the medicine was used on.  As
       long as you control this survivor, at the beginning of your turn you may
       play a medicine card applying its effects to this survivor.  If you do
       not, you must remove 1 of your action dice from the unused action dice

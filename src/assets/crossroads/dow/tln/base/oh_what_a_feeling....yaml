@@ -13,10 +13,12 @@ options:
       despair tokens from both survivors. Each player controlling one of the
       survivors rolls a die. The player with the higher roll adds the other
       player's survivor to their following.
-  - action: Pull back. If both players voted with a thumbs down this option takes
+  - action:
+      Pull back. If both players voted with a thumbs down this option takes
       effect.
     result: Nothing happens.
-  - action: If one player voted with a thumbs up (leaned in) and the other with a
+  - action:
+      If one player voted with a thumbs up (leaned in) and the other with a
       thumbs down (pulled back), this option takes effect.
     result: '"What do you think this is?" The player that voted with a thumbs up
       receives 1 despair token.'

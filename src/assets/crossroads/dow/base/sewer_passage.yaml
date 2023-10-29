@@ -6,7 +6,8 @@ context: You casually walk past an aisle of public records, when an idea strikes
   hospital.  You show your findings to the colony but no one is interested in
   traversing a pitch black labyrinth of waste.
 options:
-  - action: You're terrified but know this is your chance to do something meaningful
+  - action:
+      You're terrified but know this is your chance to do something meaningful
       for the colony, even if they don't realize it.  You decide to try to clear
       a path.
     result: Choose a survivor you control at the library. Roll a die.  Roll for

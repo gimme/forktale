@@ -7,12 +7,14 @@ context: '"And you shall shun the rot as a blight upon His name, and yea, upon
   colony must vote with a thumbs up or down. The option with the most votes
   takes effect.'
 options:
-  - action: '"These wack-jobs have to go."  Stop the fanatics from performing their
+  - action:
+      '"These wack-jobs have to go."  Stop the fanatics from performing their
       offerings.'
-    result: Remove half of the helpless survivors from the colony (rounded up). For
+    result:
+      Remove half of the helpless survivors from the colony (rounded up). For
       every survivor removed place a bandit at a random location.
-  - action: "\"It's weird, but if it makes them feel better. . .\" Allow the
-      fanatics to continue."
+  - action: '"It''s weird, but if it makes them feel better. . ." Allow the
+      fanatics to continue.'
     result: For the remainder of the game, after the pay food step of the colony
       phase, you must remove any remaining food from the supply.
 vote: true

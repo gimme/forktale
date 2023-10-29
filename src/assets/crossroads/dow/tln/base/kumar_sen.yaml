@@ -8,8 +8,9 @@ context: '"I felt it," Kumar insists. "She bumped into me like it was an
   thumbs up or down. The option with the most votes takes effect.'
 options:
   - action: Search the woman.
-    result: The item Kumar claims is his missing property is found. The player must
+    result:
+      The item Kumar claims is his missing property is found. The player must
       reveal 1 random card from his hand.
-  - action: "\"It's he-said she-said, Kumar. Sorry.\""
+  - action: '"It''s he-said she-said, Kumar. Sorry."'
     result: The player must remove a random card from his hand from the game.
 vote: true

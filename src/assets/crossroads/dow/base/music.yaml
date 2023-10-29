@@ -10,7 +10,8 @@ options:
       newfound prize and play.  Your song soothes those present, and serves as a
       reminder that there is more to being human than just surviving.
     result: Gain 1 morale.
-  - action: The next morning as the people rise for their morning meal, you play an
+  - action:
+      The next morning as the people rise for their morning meal, you play an
       old spiritual that speaks of hope, and the good things that wait beyond
       all hardship and pain.
     result: All players roll an extra action die at the beginning of the next round.

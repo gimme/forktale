@@ -12,6 +12,7 @@ options:
       you. And then the sawing begins. Remove the frostbite wound from that
       survivor and replace it with a despair token. The player cannot use that
       survivor for the remainder of their turn.
-  - action: "\"I can't do it! I've lost enough.\""
-    result: Roll a die, on a result of 3 or lower, kill the survivor. On a result of
+  - action: '"I can''t do it! I''ve lost enough."'
+    result:
+      Roll a die, on a result of 3 or lower, kill the survivor. On a result of
       4 or higher remove the frostbite wound from the survivor.

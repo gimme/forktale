@@ -7,7 +7,8 @@ context: Been a long time since you had a real drink, and you-know-who returned
   blood.  Was it poisoned? Have you been set up?
 options:
   - action: You brought this on yourself and suffer in silence.
-    result: The player that took a drink must choose a survivor he controls. Roll
+    result:
+      The player that took a drink must choose a survivor he controls. Roll
       the exposure die 3 times, and apply the results to the chosen survivor.
   - action: You wait for your poisoner to return and strangle them in their sleep.
     result: Sure enough, you find a small vial on them filled with a mysterious

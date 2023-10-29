@@ -8,9 +8,11 @@ context: You lived near the airport when you were a kid, and used to climb up on
   what looks like a crate.  An orange parachute pops open, carrying the crate to
   safety  and away from the colony.
 options:
-  - action: "\"Someone knows we're here.  There's no way this is random.  We have to
-      find that crate!\""
-    result: Choose a survivor you control and roll for exposure on that survivor 3
+  - action:
+      '"Someone knows we''re here.  There''s no way this is random.  We have to
+      find that crate!"'
+    result:
+      Choose a survivor you control and roll for exposure on that survivor 3
       times.  If they aren't killed by that exposure, add 5 food to the supply.
       "The container had Chinese or something stenciled on it.  It wasn't our
       government that made the drop, that's for sure."  If Annaleigh Chan is in

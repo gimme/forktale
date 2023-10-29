@@ -7,11 +7,13 @@ context: >-
   "What about that place?" you ask pointing at a large set of double doors bearing the sign Neonatal Intensive Care Unit. %% "God no. Seriously. That place could have everything we might want, and I'd still tell you not to go in there."
 options:
   - action: You enter the NICU.
-    result: It costs you your sanity. Roll 2 dice and keep the lower result. Place
+    result:
+      It costs you your sanity. Roll 2 dice and keep the lower result. Place
       that many despair tokens on a survivor the player controls at the
       hospital. If the survivor isn't killed, the player draws and keeps 5 item
       cards from the hospital deck.
-  - action: "\"Yeah, I don't need to see what's in there,\" you agree. You leave it
-      alone."
+  - action:
+      '"Yeah, I don''t need to see what''s in there," you agree. You leave it
+      alone.'
     result: Nothing happens.
 mature: true

@@ -11,6 +11,7 @@ context: >-
 options:
   - action: '"You need a place stay? Food?"'
     result: Search the survivor deck for Alfonso Ortega and add him to your following.
-  - action: "\"So, uh, if I can have my gun, I'll be on my way.\""
-    result: The man just calmly turns and walks away. Remove the <Weapon> item from
+  - action: '"So, uh, if I can have my gun, I''ll be on my way."'
+    result:
+      The man just calmly turns and walks away. Remove the <Weapon> item from
       the game.

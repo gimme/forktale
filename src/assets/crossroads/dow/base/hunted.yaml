@@ -1,15 +1,16 @@
 title: HUNTED
 trigger: If the player receives a non-frostbite wound as the result of rolling
   for exposure after moving
-context: "\"They shot me!  It was no accident either.  I saw them!  They were
+context: '"They shot me!  It was no accident either.  I saw them!  They were
   all decked out in camouflage and they had no interest in the zombies in the
-  area.  They were hunting me, and I tell you what  they don't look as rough as
-  us.  They look well fed.  We've got armed cannibals in our backyard.\""
+  area.  They were hunting me, and I tell you what  they don''t look as rough as
+  us.  They look well fed.  We''ve got armed cannibals in our backyard."'
 options:
   - action: You hunt down the hunters.
     result: Roll for exposure twice on each survivor you control.
   - action: You don't know anything about these hunters or what kinds of numbers
       they have.  Best not to act until you know more.
-    result: For the remainder of the game, whenever any player moves a survivor, in
+    result:
+      For the remainder of the game, whenever any player moves a survivor, in
       addition to rolling the exposure die they must roll a die. On a result of
       2 or lower that survivor receives 1 wound.

@@ -10,10 +10,12 @@ options:
   - action: Do nothing.
     result: Add 2 zombies to each location.
   - action: Close the gate.
-    result: Choose 2 survivors you control. Roll for exposure twice on each of the
+    result:
+      Choose 2 survivors you control. Roll for exposure twice on each of the
       chosen survivors. Nothing else happens.
   - action: Take the opportunity to go after the riot gear and then close the gate.
-    result: Choose 2 survivors you control. Roll for exposure 4 times on each of the
+    result:
+      Choose 2 survivors you control. Roll for exposure 4 times on each of the
       chosen survivors. If at least 1 of the chosen survivors is still alive,
       for the remainder of the game, when rolling exposure on the chosen
       survivors, treat every result as if it was a blank.

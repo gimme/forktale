@@ -7,12 +7,15 @@ context: The sun shines brightly, reflecting off the beach's perfect white sands
   both the weather and the dead?  I think the birds have it right.  The wife and
   I are flying south."
 options:
-  - action: '"Great idea as always Harold."  You open the gates for the old man and
+  - action:
+      '"Great idea as always Harold."  You open the gates for the old man and
       his wife.'
-    result: Remove 2 helpless survivor tokens in the colony from the game.  The very
+    result:
+      Remove 2 helpless survivor tokens in the colony from the game.  The very
       next morning they're found at the gates, staring in hungrily at the
       living.  Lose 1 morale.
-  - action: "\"Who's doing the fighting Harold?  It ain't either of you.  So leave
-      and die, or stop being an ingrate and shut up.\" He walks away, but you
-      realize he feels ashamed at having to rely on others."
+  - action:
+      '"Who''s doing the fighting Harold?  It ain''t either of you.  So leave
+      and die, or stop being an ingrate and shut up." He walks away, but you
+      realize he feels ashamed at having to rely on others.'
     result: Nothing happens.

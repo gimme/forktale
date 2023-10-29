@@ -11,10 +11,10 @@ context: Place Alexis at the library, if able, (this does not count as a
   to be unlocked.  Agriculture, remedial electronics, weapon usage and
   maintenance.
 options:
-  - action: "\"I think I'll stay here with the books just for a little while.\""
+  - action: '"I think I''ll stay here with the books just for a little while."'
     result: Alexis cannot move away from the library for the remainder of the game.
-  - action: "\"But no,\" she says shaking her head, tears forming in her eyes.  \"I
-      can't come back here.  It hurts too much to see the place falling into
-      decay.\""
+  - action: '"But no," she says shaking her head, tears forming in her eyes.  "I
+      can''t come back here.  It hurts too much to see the place falling into
+      decay."'
     result: Place Alexis in the colony (this does not count as a move).  Alexis
       cannot move to the library for the remainder of the game.

@@ -8,13 +8,17 @@ context: Another day and your throat feels tight. Your chest, hollow. Your head
   Please."
 options:
   - action: You find someone to talk to about your pain.
-    result: Show another player your secret objective card. Remove 1 despair token
+    result:
+      Show another player your secret objective card. Remove 1 despair token
       from a survivor you control.
-  - action: You quietly leave the colony and head for a state park you used to visit
+  - action:
+      You quietly leave the colony and head for a state park you used to visit
       with your family as a child.
-    result: Everything is silent and still. Peaceful. Spend 1 action die and remove
+    result:
+      Everything is silent and still. Peaceful. Spend 1 action die and remove
       all despair tokens from a survivor you control.
   - action: Carry on as usual.
-    result: Add another despair token to a survivor you control that already has 1
+    result:
+      Add another despair token to a survivor you control that already has 1
       or more despair tokens.
 mature: true

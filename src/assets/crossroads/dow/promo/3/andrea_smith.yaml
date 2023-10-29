@@ -6,7 +6,8 @@ context: A lone young woman greets you at the colony gate.  She holds a
   I've got food that I can trade for antibiotics."
 options:
   - action: Establish trade with the ski resort.
-    result: For the remainder of the game, players may choose to add 1 food to the
+    result:
+      For the remainder of the game, players may choose to add 1 food to the
       supply when playing a <Medicine> item card instead of resolving the effect
       of the card.
   - action: '"You trusted the wrong people," you say. "Give us the food and get lost!"'

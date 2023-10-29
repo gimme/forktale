@@ -12,9 +12,11 @@ options:
   - action: Yeah, sure!  You could take these back to the colony and have
       races.  The fact that the scooters are so slow would just make the whole
       thing hilarious!
-    result: Your hunch proves accurate, and the four hours of racing the batteries
+    result:
+      Your hunch proves accurate, and the four hours of racing the batteries
       provide raise morale by 1.  But the loud cheering also draws in the
       dead.  Add 5 zombies to the colony.
-  - action: Hilarious?  Man, that's exactly the kind of stupid thinking that makes
+  - action:
+      Hilarious?  Man, that's exactly the kind of stupid thinking that makes
       everyone dislike me.
     result: Nothing happens.

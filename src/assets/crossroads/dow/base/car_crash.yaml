@@ -9,7 +9,8 @@ context: Your headlights cut through the darkness, random snowflakes scuttling
   the side of the road.  Time slows as the world swirls sickeningly around you.
 options:
   - action: Wait in the wrecked car for the colony to rescue you.
-    result: Add a frostbite wound to the moved survivor.  Place the moved survivor
+    result:
+      Add a frostbite wound to the moved survivor.  Place the moved survivor
       in the colony (this does not count as a move).
   - action: You make your way to your destination, dazed from the crash.
     result: Place the moved survivor in the location it was headed to. Roll for

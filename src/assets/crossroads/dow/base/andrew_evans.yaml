@@ -7,7 +7,8 @@ context: Place Andrew at the Grocery Store (this does not count as a
   sheeting and PVC piping can be."
 options:
   - action: You build a greenhouse.
-    result: "Andrew Evans gains the ability: COLONY;(1+) Once per round you may add
+    result:
+      "Andrew Evans gains the ability: COLONY;(1+) Once per round you may add
       2 food tokens to the supply."
   - action: You help improve the colony's insulation.
     result: Gain 1 morale.

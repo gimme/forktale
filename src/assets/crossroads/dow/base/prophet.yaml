@@ -10,7 +10,8 @@ options:
       the pitiable thing in your arms, and promise everything will be okay.
     result: Take a non-exiled survivor that shares a location with one of your
       survivors and add them to your following.
-  - action: This is no sheep, but a goat.  You sneak up behind it, incapacitate it
+  - action:
+      This is no sheep, but a goat.  You sneak up behind it, incapacitate it
       with a brick, then set to branding its flesh.  When it returns to the
       colony, your warnings will be there for everyone to see.
     result: The colony loses 1 morale.

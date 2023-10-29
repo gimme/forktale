@@ -7,7 +7,8 @@ context: You slip through the alleyways, moving as quietly as you can, when you
   walking through town it doesn't stand a chance of surviving.
 options:
   - action: You take the horse under your care.
-    result: Attach this card to the moved survivor.  For the remainder of the game
+    result:
+      Attach this card to the moved survivor.  For the remainder of the game
       the survivor no longer has to roll for exposure when moving.  As long as
       the survivor is not exiled, during the pay food portion of the colony
       phase, the colony must pay 1 additional food.

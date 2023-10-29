@@ -6,10 +6,11 @@ context: The trash bag's contents slosh back and forth across Fatima's back as
   splits and the contents splatter out across the concrete floor. The following
   choice belongs to the player that controls Fatima.
 options:
-  - action: "\"No, no, no, no!\" Fatima shouts. \"I am a gold freakin' medalist!
-      I've competed with the greatest champions in the world, and you all want
-      me scrubbing floors and taking out the trash? I can't do this!\""
-    result: For the remainder of the game you can only use Fatima to search. Once
+  - action: '"No, no, no, no!" Fatima shouts. "I am a gold freakin'' medalist!
+      I''ve competed with the greatest champions in the world, and you all want
+      me scrubbing floors and taking out the trash? I can''t do this!"'
+    result:
+      For the remainder of the game you can only use Fatima to search. Once
       per turn you are required to move Fatima from her current location. If you
       cannot, place 1 despair token on Fatima.
   - action: Fatima looks at the waste in front of her with dead, accepting eyes.

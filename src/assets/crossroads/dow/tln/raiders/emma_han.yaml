@@ -10,9 +10,11 @@ context: Emma is exploring the ruins when she hears the sound of a gun being
   and Emma flee to a room with a lock on the door.
 options:
   - action: There are few enough humans in the world, so you decide to help him.
-    result: The man's appreciation is genuine. Grateful for your help, he gives you
+    result:
+      The man's appreciation is genuine. Grateful for your help, he gives you
       a token of his gratitude. Discard a medicine card and take a card of your
       choice from the Bandit's Hideout. Remove 1 bandit from the location.
-  - action: The man won't last the night, so you slip out a window the first chance
+  - action:
+      The man won't last the night, so you slip out a window the first chance
       you get.
     result: Add 1 zombie to your location and remove the bandit.

@@ -11,7 +11,8 @@ context: You've never liked Mickey. He's a creep, and you wish you hadn't been
 options:
   - action: You sneak up behind Mickey and give the monster what he deserves,
       pushing his face down into the jaws of the dead woman.
-    result: Remove the helpless survivor and place a despair token on the survivor
+    result:
+      Remove the helpless survivor and place a despair token on the survivor
       at the colony.
   - action: You wait for the others, then tell them what you've seen.
     result: Mickey curses you as you expel him naked from the colony. Remove the

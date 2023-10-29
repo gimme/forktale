@@ -14,7 +14,8 @@ options:
       each groomed survivor. If the roll is a 1, the chosen survivor takes a
       wound. If the roll is 2-6, remove all despair tokens from the chosen
       survivor.
-  - action: '"Sorry pops. Long hair helps keep the cold out. Maybe further down the
+  - action:
+      '"Sorry pops. Long hair helps keep the cold out. Maybe further down the
       road."'
     result: Nothing happens.
 vote: true

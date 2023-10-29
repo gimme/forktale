@@ -16,7 +16,8 @@ options:
   - action: Reject Rosa's bid to become the colony leader.
     result: Nothing happens.
   - action: If Nadia Rivers is in play this option triggers instead.
-    result: Nadia stands up and demands, "Wait just a second Rosa! If we are going
+    result:
+      Nadia stands up and demands, "Wait just a second Rosa! If we are going
       to institute a rule of law around here, it should be done by committee."
       Search the crossroads deck and discard pile for the 'Power Struggle'
       crossroads card and immediately trigger it.

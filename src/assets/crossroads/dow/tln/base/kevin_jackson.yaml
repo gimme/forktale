@@ -13,7 +13,8 @@ options:
       is in play, every time Kevin's ability is used you must trigger this
       crossroads card again.
   - action: Kevin runs.
-    result: Roll a die. On a result of 1, Kevin receives 2 wounds. On a result of 2
+    result:
+      Roll a die. On a result of 1, Kevin receives 2 wounds. On a result of 2
       or higher nothing happens. In either case this card remains in play. While
       this card is in play, every time Kevin's ability is used you must trigger
       this crossroads card again.

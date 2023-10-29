@@ -9,7 +9,8 @@ context: You regret finding the secret lab as you clamp a hand over your mouth.
   shall know that joy."
 options:
   - action: You run like hell.
-    result: Your bag snags on something and rips open, but you keep running. Shuffle
+    result:
+      Your bag snags on something and rips open, but you keep running. Shuffle
       2 item cards from your hand into the Raxxon item deck.
   - action: You look around the laboratory as the thing behind the glass screams
       obscenities at you.

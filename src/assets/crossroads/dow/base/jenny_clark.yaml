@@ -11,10 +11,11 @@ context: The jar of pennies crashes to the floor, glass shards and tarnished
   going to want to meet you." The player to the left of the player controlling
   Jenny must choose.
 options:
-  - action: "\"Hurry, open the gates!  Jenny's back but it looks like she's
-      surrounded by the dead!\""
+  - action: '"Hurry, open the gates!  Jenny''s back but it looks like she''s
+      surrounded by the dead!"'
     result: Place Jenny at the colony.  Add 8 zombies to the colony.
-  - action: Peering through the rifle's scope he sees Jenny walking slowly down the
+  - action:
+      Peering through the rifle's scope he sees Jenny walking slowly down the
       road, a group of dead in tow.  "Oh God," he mutters, slipping a finger
       over the trigger.  "That ditz must have gotten herself bit."
     result: Kill Jenny Clark.

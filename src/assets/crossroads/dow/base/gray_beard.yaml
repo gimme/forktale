@@ -7,14 +7,15 @@ context: You are walking along the outskirts of the colony when you hear the
   undead.  He swings his gun on you as you arrive, and your hands fly up. "I'm
   alive," you shout.  "Don't shoot!"
 options:
-  - action: "\"Just take it.  I don't want any trouble!\""
+  - action: '"Just take it.  I don''t want any trouble!"'
     result: Choose a card at random from your hand.  Remove it from the game.
   - action: '"We could use a man like you in our group," you say.'
-    result: "\"I wouldn't mind having some others watching my back - my crew's all
-      dead,\" the stranger rasps. \"But here's the thing, I don't follow orders
-      so good.  If you want my aid, then we follow my rules.\"  Search the
+    result:
+      '"I wouldn''t mind having some others watching my back - my crew''s all
+      dead," the stranger rasps. "But here''s the thing, I don''t follow orders
+      so good.  If you want my aid, then we follow my rules."  Search the
       survivor deck for Gray Beard, make him your group leader and place this
-      card under him.  Once per round, Gray Beard doesn't have to roll for
+      card under him.  Once per round, Gray Beard doesn''t have to roll for
       exposure when attacking. As long as you control Gray Beard, you cannot add
-      cards to a crisis."
+      cards to a crisis.'
 noCoop: true
