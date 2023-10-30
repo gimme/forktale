@@ -1,17 +1,37 @@
 import Card from "./Card"
 import { useEffect, useState } from "react"
-import { Box, List, ListItemButton, Paper, Stack } from "@mui/material"
-import CardData, { getCards } from "@/features/crossroads/CardData"
+import {
+    Box,
+    CircularProgress,
+    List,
+    ListItemButton,
+    Paper,
+    Stack,
+} from "@mui/material"
+import CardData from "@/features/crossroads/CardData"
+import { getCards, loadCards } from "@/features/crossroads/cardStore"
 
 export function CrossroadsPage() {
-    const [cards, setCards] = useState<CardData[] | undefined>(undefined)
     const [card, setCard] = useState<CardData | null>(null)
+    const [loading, setLoading] = useState<boolean>(false)
+    const cards: CardData[] = getCards("dow/base").sort((a, b) =>
+        a.title.localeCompare(b.title),
+    )
 
     useEffect(() => {
-        const cards = getCards("dow/base").sort((a, b) =>
-            a.title.localeCompare(b.title),
-        )
-        setCards(cards)
+        let ignore = false
+        setLoading(true)
+        loadCards()
+            .then(() => {
+                if (ignore) return
+                setLoading(false)
+            })
+            .catch((e) => {
+                console.error(e)
+            })
+        return () => {
+            ignore = true
+        }
     }, [])
 
     return (
@@ -25,18 +45,22 @@ export function CrossroadsPage() {
                         overflow: "auto",
                     }}
                 >
-                    <List>
-                        {cards?.map((card) => (
-                            <ListItemButton
-                                key={card.title}
-                                onClick={() => {
-                                    setCard(card)
-                                }}
-                            >
-                                {card.title}
-                            </ListItemButton>
-                        ))}
-                    </List>
+                    {loading ? (
+                        <CircularProgress />
+                    ) : (
+                        <List>
+                            {cards?.map((card) => (
+                                <ListItemButton
+                                    key={card.title}
+                                    onClick={() => {
+                                        setCard(card)
+                                    }}
+                                >
+                                    {card.title}
+                                </ListItemButton>
+                            ))}
+                        </List>
+                    )}
                 </Paper>
                 <Box>
                     {card && (
