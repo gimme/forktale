@@ -8,25 +8,41 @@ export default function Card(props: CardProps) {
     const data = props.cardData
 
     return (
-        <div className="card">
-            <p>Title: {data.title}</p>
-            <p>Card Set: {data.cardSet}</p>
-            <p>Trigger: {data.trigger}</p>
-            <p>Context: {data.context}</p>
-            <p>Result: {data.result}</p>
+        <div>
+            <p>
+                <b>Title:</b> {data.title}
+            </p>
+            <p>
+                <b>Card Set:</b> {data.cardSet}
+            </p>
+            <p>
+                <b>Trigger:</b> {data.trigger}
+            </p>
+            <p>
+                <b>Context:</b> {data.context}
+            </p>
+            <p>
+                <b>Result:</b> {data.result}
+            </p>
             {data.options?.map((option, i) => (
                 <div key={i}>
                     <p>
-                        Action{i + 1}: {option.action}
+                        <b>Action{i + 1}:</b> {option.action}
                     </p>
                     <p>
-                        Result{i + 1}: {option.result}
+                        <b>Result{i + 1}:</b> {option.result}
                     </p>
                 </div>
             )) ?? null}
-            <p>Vote: {data.vote?.toString() ?? "false"}</p>
-            <p>Mature: {data.mature?.toString() ?? "false"}</p>
-            <p>Co-op: {(!data.noCoop).toString()}</p>
+            <p>
+                <b>Vote:</b> {data.vote?.toString() ?? "false"}
+            </p>
+            <p>
+                <b>Mature:</b> {data.mature?.toString() ?? "false"}
+            </p>
+            <p>
+                <b>Co-op:</b> {(!data.noCoop).toString()}
+            </p>
         </div>
     )
 }
