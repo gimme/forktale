@@ -15,35 +15,34 @@ const crossroadAssets = import.meta.glob("/src/assets/crossroads/**/*.yaml", {
     as: "raw",
 })
 
-export function loadCrossroads(): Promise<void> {
-    if (Object.keys(state.crossroadsBySet).length > 0) return Promise.resolve()
+export async function loadCrossroads() {
+    if (Object.keys(state.crossroadsBySet).length > 0) return
 
-    return Promise.all(
-        Object.entries(crossroadAssets).map(([path, mod]) =>
-            mod().then((yaml) => [path, yaml]),
-        ),
-    )
-        .then((values) => {
-            return Object.fromEntries(values)
-        })
-        .then((crossroadYamls: Record<string, string>) => {
-            console.log(crossroadYamls)
-            state.crossroadsBySet = Object.entries(crossroadYamls).reduce(
-                (acc: Record<string, Crossroad[]>, [path, yaml]) => {
-                    const cardSet = path.slice(
-                        crossroadAssetsBasePath.length + 1,
-                        path.lastIndexOf("/"),
-                    )
-                    acc[cardSet] = acc[cardSet] ?? []
-                    acc[cardSet].push(yamlToCrossroad(yaml, cardSet))
-                    return acc
-                },
-                {},
-            )
-        })
-        .catch((err) => {
-            console.error(err)
-        })
+    try {
+        const values = await Promise.all(
+            Object.entries(crossroadAssets).map(([path, mod]) =>
+                mod().then((yaml) => [path, yaml]),
+            ),
+        )
+
+        const crossroadYamls: Record<string, string> =
+            Object.fromEntries(values)
+        console.log(crossroadYamls)
+        state.crossroadsBySet = Object.entries(crossroadYamls).reduce(
+            (acc: Record<string, Crossroad[]>, [path, yaml]) => {
+                const cardSet = path.slice(
+                    crossroadAssetsBasePath.length + 1,
+                    path.lastIndexOf("/"),
+                )
+                acc[cardSet] = acc[cardSet] ?? []
+                acc[cardSet].push(yamlToCrossroad(yaml, cardSet))
+                return acc
+            },
+            {},
+        )
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 export function getCrossroads(cardSet: string): Crossroad[] {
