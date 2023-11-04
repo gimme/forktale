@@ -1,5 +1,6 @@
-import CardData from "@/features/crossroads/CardData"
 import YAML from "yaml"
+
+import CardData from "./CardData"
 
 type State = {
     cardsBySet: Record<string, CardData[]>

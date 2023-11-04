@@ -1,6 +1,8 @@
-import { Button, Container, Stack, TextField, Typography } from "@mui/material"
-import strings from "@/assets/strings"
 import { useNavigate } from "react-router-dom"
+
+import { Button, Container, Stack, TextField, Typography } from "@mui/material"
+
+import strings from "@/assets/strings"
 
 export default function LobbyPage() {
     const navigate = useNavigate()

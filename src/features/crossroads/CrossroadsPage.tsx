@@ -1,5 +1,5 @@
-import Card from "./Card"
 import { useEffect, useState } from "react"
+
 import {
     Box,
     CircularProgress,
@@ -8,8 +8,10 @@ import {
     Paper,
     Stack,
 } from "@mui/material"
-import CardData from "@/features/crossroads/CardData"
-import { getCards, loadCards } from "@/features/crossroads/cardStore"
+
+import Card from "./Card"
+import CardData from "./CardData"
+import { getCards, loadCards } from "./cardStore"
 
 export function CrossroadsPage() {
     const [card, setCard] = useState<CardData | null>(null)
