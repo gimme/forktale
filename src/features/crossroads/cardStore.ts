@@ -1,41 +1,41 @@
 import YAML from "yaml"
 
-import CardData from "./CardData"
+import Crossroad from "./Crossroad"
 
 type State = {
-    cardsBySet: Record<string, CardData[]>
+    crossroadsBySet: Record<string, Crossroad[]>
 }
 
 const state: State = {
-    cardsBySet: {},
+    crossroadsBySet: {},
 }
 
-const cardAssetsBasePath = "/src/assets/crossroads"
-const cardAssets = import.meta.glob("/src/assets/crossroads/**/*.yaml", {
+const crossroadAssetsBasePath = "/src/assets/crossroads"
+const crossroadAssets = import.meta.glob("/src/assets/crossroads/**/*.yaml", {
     as: "raw",
 })
 
-export function loadCards(): Promise<void> {
-    if (Object.keys(state.cardsBySet).length > 0) return Promise.resolve()
+export function loadCrossroads(): Promise<void> {
+    if (Object.keys(state.crossroadsBySet).length > 0) return Promise.resolve()
 
     return Promise.all(
-        Object.entries(cardAssets).map(([path, mod]) =>
+        Object.entries(crossroadAssets).map(([path, mod]) =>
             mod().then((yaml) => [path, yaml]),
         ),
     )
         .then((values) => {
             return Object.fromEntries(values)
         })
-        .then((cardYamls: Record<string, string>) => {
-            console.log(cardYamls)
-            state.cardsBySet = Object.entries(cardYamls).reduce(
-                (acc: Record<string, CardData[]>, [path, yaml]) => {
+        .then((crossroadYamls: Record<string, string>) => {
+            console.log(crossroadYamls)
+            state.crossroadsBySet = Object.entries(crossroadYamls).reduce(
+                (acc: Record<string, Crossroad[]>, [path, yaml]) => {
                     const cardSet = path.slice(
-                        cardAssetsBasePath.length + 1,
+                        crossroadAssetsBasePath.length + 1,
                         path.lastIndexOf("/"),
                     )
                     acc[cardSet] = acc[cardSet] ?? []
-                    acc[cardSet].push(yamlToCard(yaml, cardSet))
+                    acc[cardSet].push(yamlToCrossroad(yaml, cardSet))
                     return acc
                 },
                 {},
@@ -46,15 +46,15 @@ export function loadCards(): Promise<void> {
         })
 }
 
-export function getCards(cardSet: string): CardData[] {
-    return Object.keys(state.cardsBySet)
+export function getCrossroads(cardSet: string): Crossroad[] {
+    return Object.keys(state.crossroadsBySet)
         .filter((key) => key === cardSet || key.startsWith(`${cardSet}/`))
-        .flatMap((key) => state.cardsBySet[key])
+        .flatMap((key) => state.crossroadsBySet[key])
 }
 
-export function yamlToCard(yaml: string, cardSet: string): CardData {
+export function yamlToCrossroad(yaml: string, cardSet: string): Crossroad {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const partial: Partial<CardData> = YAML.parse(yaml)
+    const partial: Partial<Crossroad> = YAML.parse(yaml)
 
     return {
         title: partial.title!,

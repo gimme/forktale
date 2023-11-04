@@ -9,21 +9,21 @@ import {
     Stack,
 } from "@mui/material"
 
-import Card from "./Card"
-import CardData from "./CardData"
-import { getCards, loadCards } from "./cardStore"
+import Crossroad from "./Crossroad"
+import CrossroadCard from "./CrossroadCard"
+import { getCrossroads, loadCrossroads } from "./cardStore"
 
 export function CrossroadsPage() {
-    const [card, setCard] = useState<CardData | null>(null)
+    const [card, setCard] = useState<Crossroad | null>(null)
     const [loading, setLoading] = useState<boolean>(false)
-    const cards: CardData[] = getCards("dow/base").sort((a, b) =>
+    const cards: Crossroad[] = getCrossroads("dow/base").sort((a, b) =>
         a.title.localeCompare(b.title),
     )
 
     useEffect(() => {
         let ignore = false
         setLoading(true)
-        loadCards()
+        loadCrossroads()
             .then(() => {
                 if (ignore) return
                 setLoading(false)
@@ -40,7 +40,7 @@ export function CrossroadsPage() {
         <>
             <Stack direction="row" spacing={2}>
                 <Paper
-                    style={{
+                    sx={{
                         height: "100vh",
                         maxHeight: "100vh",
                         minWidth: "300px",
@@ -67,7 +67,7 @@ export function CrossroadsPage() {
                 <Box>
                     {card && (
                         <>
-                            <Card cardData={card} />
+                            <CrossroadCard crossroad={card} />
                         </>
                     )}
                 </Box>
