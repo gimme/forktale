@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import { Button, Container, Stack, TextField, Typography } from "@mui/material"
@@ -6,9 +7,18 @@ import strings from "@/assets/strings"
 
 export default function LobbyPage() {
     const navigate = useNavigate()
+    const [code, setCode] = useState<string>("")
 
-    const onClickCreate = () => {
-        navigate("/crossroads")
+    const onChangeCode = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setCode(event.target.value)
+    }
+
+    const handleJoin = () => {
+        navigate(`/${code}`)
+    }
+
+    const handleCreate = () => {
+        navigate("/create")
     }
 
     return (
@@ -31,15 +41,24 @@ export default function LobbyPage() {
                         margin="normal"
                         fullWidth
                         id="code"
-                        name="code"
                         label={strings.common.code}
                         sx={{ textTransform: "capitalize" }}
-                        disabled
+                        value={code}
+                        onChange={onChangeCode}
                     />
-                    <Button variant="outlined" disabled>
+                    <Button
+                        aria-label={"join"}
+                        variant="outlined"
+                        disabled={!code}
+                        onClick={handleJoin}
+                    >
                         {strings.common.join}
                     </Button>
-                    <Button variant="contained" onClick={onClickCreate}>
+                    <Button
+                        aria-label={"create"}
+                        variant="contained"
+                        onClick={handleCreate}
+                    >
                         {strings.common.create}
                     </Button>
                 </Stack>

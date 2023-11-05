@@ -7,5 +7,6 @@ export default {
         continue: "continue",
         create: "create",
         join: "join",
+        start: "start",
     },
 }

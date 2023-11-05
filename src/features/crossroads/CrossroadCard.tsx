@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
@@ -25,18 +25,23 @@ type Props = {
 }
 
 export default function CrossroadCard(props: Props) {
-    const [page, setPage] = useState<"trigger" | "context" | "result">(
-        "trigger",
+    const [page, setPage] = useState<"back" | "trigger" | "context" | "result">(
+        "back",
     )
     const [chosenOption, setChosenOption] = useState<CrossroadOption | null>(
         null,
     )
 
+    useEffect(() => {
+        setPage("back")
+        setChosenOption(null)
+    }, [props.crossroad])
+
     const handleDiscard = () => props.onDiscard()
-    const handleOpen = () => setPage("context")
     const handleBack = () => {
         switch (page) {
             case "trigger":
+                setPage("back")
                 break
             case "context":
                 setPage("trigger")
@@ -47,14 +52,29 @@ export default function CrossroadCard(props: Props) {
                 break
         }
     }
-    const handleOption = (option: CrossroadOption | null) => {
-        setChosenOption(option)
-        setPage("result")
+    const handleNext = () => {
+        switch (page) {
+            case "back":
+                setPage("trigger")
+                break
+            case "trigger":
+                setPage("context")
+                break
+            case "context":
+                setPage("result")
+                break
+            case "result":
+                props.onComplete()
+                break
+        }
     }
-    const handleComplete = () => props.onComplete()
+    const handleOption = (option: CrossroadOption) => {
+        setChosenOption(option)
+        handleNext()
+    }
 
     const crossroad = props.crossroad
-    const title = page === "trigger" ? "" : crossroad.title
+    const title = page === "back" || page === "trigger" ? "" : crossroad.title
 
     const content =
         page === "trigger" ? (
@@ -67,7 +87,7 @@ export default function CrossroadCard(props: Props) {
                 <Stack>
                     {crossroad.options?.map((option, i) => (
                         <Button
-                            aria-label={`option ${i + 1}`}
+                            aria-label={`option-${i + 1}`}
                             variant={"outlined"}
                             key={i}
                             onClick={() => handleOption(option)}
@@ -83,7 +103,7 @@ export default function CrossroadCard(props: Props) {
                         <Button
                             aria-label="continue"
                             variant={"outlined"}
-                            onClick={() => handleOption(null)}
+                            onClick={() => handleNext()}
                             sx={{ marginTop: 2 }}
                         >
                             {strings.common.continue}
@@ -98,7 +118,19 @@ export default function CrossroadCard(props: Props) {
         ) : null
 
     const actions =
-        page === "trigger" ? (
+        page === "back" ? (
+            <>
+                <IconButton
+                    aria-label="continue"
+                    size="large"
+                    color="primary"
+                    onClick={handleNext}
+                    sx={{ marginLeft: "auto", padding: "20px" }}
+                >
+                    <ArrowForwardIcon />
+                </IconButton>
+            </>
+        ) : page === "trigger" ? (
             <>
                 <IconButton
                     aria-label="discard"
@@ -113,7 +145,7 @@ export default function CrossroadCard(props: Props) {
                     aria-label="continue"
                     size="large"
                     color="primary"
-                    onClick={handleOpen}
+                    onClick={handleNext}
                     sx={{ marginLeft: "auto", padding: "20px" }}
                 >
                     <ArrowForwardIcon />
@@ -144,7 +176,7 @@ export default function CrossroadCard(props: Props) {
                     aria-label="complete"
                     size="large"
                     color="primary"
-                    onClick={handleComplete}
+                    onClick={handleNext}
                     sx={{ marginLeft: "auto", padding: "20px" }}
                 >
                     <ArrowForwardIcon />
