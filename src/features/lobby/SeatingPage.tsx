@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 
+import WarningAmberOutlinedIcon from "@mui/icons-material/WarningAmberOutlined"
 import { Button, Stack, Typography } from "@mui/material"
 
 import strings from "@/assets/strings"
@@ -18,7 +19,7 @@ export default function SeatingPage() {
             <Typography component="h1" variant="h4" align="center">
                 {strings.room.selectSeat}
             </Typography>
-            <Stack direction="column" spacing={5} sx={{ width: "100%", mt: 5 }}>
+            <Stack direction="column" spacing={5} sx={{ width: "100%", my: 5 }}>
                 {[1, 2, 3, 4, 5].map((seat) => (
                     <Button
                         key={seat}
@@ -30,6 +31,12 @@ export default function SeatingPage() {
                         {seat}
                     </Button>
                 ))}
+            </Stack>
+            <Stack direction={"row"} color="text.secondary" spacing={1}>
+                <WarningAmberOutlinedIcon />
+                <Typography component="p" align="center">
+                    {strings.room.uniqueSeat}
+                </Typography>
             </Stack>
         </MainContainer>
     )
