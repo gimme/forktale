@@ -9,6 +9,7 @@ import {
     CardActions,
     CardContent,
     CardHeader,
+    Divider,
     IconButton,
     Stack,
     Typography,
@@ -130,7 +131,7 @@ export default function CrossroadCard(props: Props) {
                     {crossroad.options?.map((option, i) => (
                         <Button
                             aria-label={`option-${i + 1}`}
-                            variant={"outlined"}
+                            variant="outlined"
                             key={i}
                             onClick={() => handleOption(option)}
                             sx={{
@@ -144,9 +145,9 @@ export default function CrossroadCard(props: Props) {
                     )) ?? (
                         <Button
                             aria-label="continue"
-                            variant={"outlined"}
+                            variant="outlined"
                             onClick={handleContinue}
-                            sx={{ marginTop: 2 }}
+                            sx={{ marginTop: 2.5 }}
                         >
                             {strings.common.continue}
                         </Button>
@@ -188,9 +189,10 @@ export default function CrossroadCard(props: Props) {
                     titleTypographyProps={{ align: "center" }}
                     sx={{ height: 75 }}
                 />
-                <CardContent sx={{ height: 500, overflow: "scroll" }}>
+                <CardContent sx={{ height: 500, overflow: "auto" }}>
                     <CrossroadContent />
                 </CardContent>
+                <Divider />
                 <CardActions disableSpacing={true}>
                     <CrossroadActions />
                 </CardActions>
