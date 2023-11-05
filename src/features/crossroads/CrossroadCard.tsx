@@ -25,15 +25,15 @@ type Props = {
 }
 
 export default function CrossroadCard(props: Props) {
-    const [page, setPage] = useState<"back" | "trigger" | "context" | "result">(
-        "back",
+    const [page, setPage] = useState<null | "trigger" | "context" | "result">(
+        null,
     )
     const [chosenOption, setChosenOption] = useState<CrossroadOption | null>(
         null,
     )
 
     useEffect(() => {
-        setPage("back")
+        setPage(null)
         setChosenOption(null)
     }, [props.crossroad])
 
@@ -41,7 +41,7 @@ export default function CrossroadCard(props: Props) {
     const handleBack = () => {
         switch (page) {
             case "trigger":
-                setPage("back")
+                setPage(null)
                 break
             case "context":
                 setPage("trigger")
@@ -52,9 +52,9 @@ export default function CrossroadCard(props: Props) {
                 break
         }
     }
-    const handleNext = () => {
+    const handleContinue = () => {
         switch (page) {
-            case "back":
+            case null:
                 setPage("trigger")
                 break
             case "trigger":
@@ -70,13 +70,55 @@ export default function CrossroadCard(props: Props) {
     }
     const handleOption = (option: CrossroadOption) => {
         setChosenOption(option)
-        handleNext()
+        handleContinue()
     }
 
     const crossroad = props.crossroad
-    const title = page === "back" || page === "trigger" ? "" : crossroad.title
+    const title = page === null || page === "trigger" ? "" : crossroad.title
 
-    const content =
+    const ContinueButton = () => {
+        return (
+            <IconButton
+                aria-label="continue"
+                size="large"
+                color="primary"
+                onClick={handleContinue}
+                sx={{
+                    marginLeft: "auto",
+                    padding: "20px",
+                }}
+            >
+                <ArrowForwardIcon />
+            </IconButton>
+        )
+    }
+    const BackButton = () => {
+        return (
+            <IconButton
+                aria-label="back"
+                size="large"
+                onClick={handleBack}
+                sx={{ padding: "20px" }}
+            >
+                <ArrowBackIcon />
+            </IconButton>
+        )
+    }
+    const DiscardButton = () => {
+        return (
+            <IconButton
+                aria-label="discard"
+                size="large"
+                color="secondary"
+                onClick={handleDiscard}
+                sx={{ padding: "20px" }}
+            >
+                <CloseIcon />
+            </IconButton>
+        )
+    }
+
+    const CrossroadContent = () =>
         page === "trigger" ? (
             <Typography component="p" sx={{ textAlign: "center" }}>
                 {crossroad.trigger + "..."}
@@ -103,7 +145,7 @@ export default function CrossroadCard(props: Props) {
                         <Button
                             aria-label="continue"
                             variant={"outlined"}
-                            onClick={() => handleNext()}
+                            onClick={handleContinue}
                             sx={{ marginTop: 2 }}
                         >
                             {strings.common.continue}
@@ -117,70 +159,24 @@ export default function CrossroadCard(props: Props) {
             </Typography>
         ) : null
 
-    const actions =
-        page === "back" ? (
+    const CrossroadActions = () =>
+        page === null ? (
             <>
-                <IconButton
-                    aria-label="continue"
-                    size="large"
-                    color="primary"
-                    onClick={handleNext}
-                    sx={{ marginLeft: "auto", padding: "20px" }}
-                >
-                    <ArrowForwardIcon />
-                </IconButton>
+                <ContinueButton />
             </>
         ) : page === "trigger" ? (
             <>
-                <IconButton
-                    aria-label="discard"
-                    size="large"
-                    color="secondary"
-                    onClick={handleDiscard}
-                    sx={{ padding: "20px" }}
-                >
-                    <CloseIcon />
-                </IconButton>
-                <IconButton
-                    aria-label="continue"
-                    size="large"
-                    color="primary"
-                    onClick={handleNext}
-                    sx={{ marginLeft: "auto", padding: "20px" }}
-                >
-                    <ArrowForwardIcon />
-                </IconButton>
+                <DiscardButton />
+                <ContinueButton />
             </>
         ) : page === "context" ? (
             <>
-                <IconButton
-                    aria-label="back"
-                    size="large"
-                    onClick={handleBack}
-                    sx={{ padding: "20px" }}
-                >
-                    <ArrowBackIcon />
-                </IconButton>
+                <BackButton />
             </>
         ) : page === "result" ? (
             <>
-                <IconButton
-                    aria-label="back"
-                    size="large"
-                    onClick={handleBack}
-                    sx={{ padding: "20px" }}
-                >
-                    <ArrowBackIcon />
-                </IconButton>
-                <IconButton
-                    aria-label="complete"
-                    size="large"
-                    color="primary"
-                    onClick={handleNext}
-                    sx={{ marginLeft: "auto", padding: "20px" }}
-                >
-                    <ArrowForwardIcon />
-                </IconButton>
+                <BackButton />
+                <ContinueButton />
             </>
         ) : null
 
@@ -193,9 +189,11 @@ export default function CrossroadCard(props: Props) {
                     sx={{ height: 75 }}
                 />
                 <CardContent sx={{ height: 500, overflow: "scroll" }}>
-                    {content}
+                    <CrossroadContent />
                 </CardContent>
-                <CardActions disableSpacing={true}>{actions}</CardActions>
+                <CardActions disableSpacing={true}>
+                    <CrossroadActions />
+                </CardActions>
             </Card>
         </>
     )
