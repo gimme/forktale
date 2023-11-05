@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
 
 import {
-    Box,
     CircularProgress,
+    Container,
     List,
     ListItemButton,
     Paper,
-    Stack,
 } from "@mui/material"
 
 import Crossroad from "./Crossroad"
@@ -16,6 +15,10 @@ import { getCrossroads, loadCrossroads } from "./cardStore"
 export function CrossroadsPage() {
     const [card, setCard] = useState<Crossroad | null>(null)
     const [loading, setLoading] = useState<boolean>(false)
+
+    const handleDiscard = () => setCard(null)
+    const handleComplete = () => setCard(null)
+
     const cards: Crossroad[] = getCrossroads("dow/base").sort((a, b) =>
         a.title.localeCompare(b.title),
     )
@@ -37,8 +40,25 @@ export function CrossroadsPage() {
     }, [])
 
     return (
-        <>
-            <Stack direction="row" spacing={2}>
+        <Container
+            component="main"
+            maxWidth="sm"
+            sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                minHeight: "100vh",
+            }}
+        >
+            {(card && (
+                <>
+                    <CrossroadCard
+                        crossroad={card}
+                        onDiscard={handleDiscard}
+                        onComplete={handleComplete}
+                    />
+                </>
+            )) || (
                 <Paper
                     sx={{
                         height: "100vh",
@@ -64,14 +84,7 @@ export function CrossroadsPage() {
                         </List>
                     )}
                 </Paper>
-                <Box>
-                    {card && (
-                        <>
-                            <CrossroadCard crossroad={card} />
-                        </>
-                    )}
-                </Box>
-            </Stack>
-        </>
+            )}
+        </Container>
     )
 }

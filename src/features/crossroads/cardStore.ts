@@ -27,7 +27,6 @@ export async function loadCrossroads() {
 
         const crossroadYamls: Record<string, string> =
             Object.fromEntries(values)
-        console.log(crossroadYamls)
         state.crossroadsBySet = Object.entries(crossroadYamls).reduce(
             (acc: Record<string, Crossroad[]>, [path, yaml]) => {
                 const cardSet = path.slice(

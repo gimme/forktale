@@ -4,6 +4,7 @@ export default {
     },
     common: {
         code: "code",
+        continue: "continue",
         create: "create",
         join: "join",
     },
