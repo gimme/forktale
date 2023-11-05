@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { useNavigate, useParams, useSearchParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 import { CircularProgress } from "@mui/material"
 
@@ -7,39 +7,72 @@ import MainContainer from "@/components/MainContainer"
 import { shuffle } from "@/utils/random"
 
 import Crossroad from "./Crossroad"
-import CrossroadCard from "./CrossroadCard"
+import CrossroadCard, { CardPage } from "./CrossroadCard"
 import { getCrossroads, loadCrossroads } from "./cardStore"
 
 export function CrossroadsPage() {
     const navigate = useNavigate()
-    const { roomCode, seat } = useParams()
-    const [searchParams, setSearchParams] = useSearchParams()
+    const { roomCode, seat, card, page } = useParams()
     const [loading, setLoading] = useState<boolean>(false)
 
-    const baseCards = getCrossroads("dow/base")
-    const cards: Crossroad[] = useMemo(() => {
-        if (!roomCode || !seat) return []
-        const seatIndex = parseInt(seat) - 1
-        if (seatIndex < 0) navigate(`/${roomCode}`)
-        const offset = seatIndex * (baseCards.length / 5)
+    const validateSeatIndex = (): number => {
+        const seatNumber = parseInt(seat ?? "")
+        if (isNaN(seatNumber) || seatNumber < 1)
+            navigate(`/${roomCode}`, { replace: true })
+        return seatNumber - 1
+    }
+    const validateCardIndex = (): number => {
+        const cardNumber = parseInt(card ?? "")
+        if (isNaN(cardNumber) || cardNumber < 1)
+            navigate(`/${roomCode}/${seat}/1`, { replace: true })
+        return cardNumber - 1
+    }
+    const validatePage = (): CardPage | null => {
+        if (page === "trigger") return "trigger"
+        if (page === "context") return "context"
+        if (page === "result") return "result"
+        if (page == null) return null
+
+        navigate(`/${roomCode}/${seat}/${card}`, { replace: true })
+        return null
+    }
+
+    const seatIndex = validateSeatIndex()
+    const currentCardIndex = validateCardIndex()
+    const currentPage = validatePage()
+
+    const baseCrossroads = getCrossroads("dow/base")
+    const crossroads: Crossroad[] = useMemo(() => {
+        if (!roomCode || seatIndex == null) return []
+        const offset = seatIndex * (baseCrossroads.length / 5)
         const extraEntropy = seatIndex < 5 ? "" : Math.floor(seatIndex / 5)
-        return shuffle(baseCards, roomCode + extraEntropy, offset)
-    }, [baseCards, navigate, roomCode, seat])
-    const currentCardIndex = parseInt(searchParams.get("i") ?? "") ?? 0
-    const card =
-        cards.length > currentCardIndex ? cards[currentCardIndex] : null
+        return shuffle(baseCrossroads, roomCode + extraEntropy, offset)
+    }, [baseCrossroads, roomCode, seatIndex])
+
+    const crossroad =
+        crossroads.length > currentCardIndex
+            ? crossroads[currentCardIndex]
+            : null
 
     const nextCard = () => {
-        setSearchParams({ ...searchParams, i: `${currentCardIndex + 1}` })
+        navigate(`/${roomCode}/${seat}/${currentCardIndex + 2}`)
     }
-    const handleDiscard = () => nextCard()
-    const handleComplete = () => nextCard()
-
-    useEffect(() => {
-        if (isNaN(parseInt(searchParams.get("i") ?? ""))) {
-            setSearchParams({ ...searchParams, i: "0" }, { replace: true })
-        }
-    }, [searchParams, setSearchParams])
+    const setCardPage = (page: CardPage | null) => {
+        navigate(
+            `/${roomCode}/${seat}/${currentCardIndex + 1}${
+                page ? `/${page}` : ""
+            }`,
+        )
+    }
+    const handleDiscard = () => {
+        nextCard()
+    }
+    const handleContinue = () => {
+        if (currentPage === null) setCardPage("trigger")
+        if (currentPage === "trigger") setCardPage("context")
+        if (currentPage === "context") setCardPage("result")
+        if (currentPage === "result") nextCard()
+    }
 
     useEffect(() => {
         let ignore = false
@@ -62,12 +95,13 @@ export function CrossroadsPage() {
             {loading ? (
                 <CircularProgress />
             ) : (
-                card && (
+                crossroad && (
                     <>
                         <CrossroadCard
-                            crossroad={card}
+                            crossroad={crossroad}
+                            page={currentPage}
                             onDiscard={handleDiscard}
-                            onComplete={handleComplete}
+                            onContinue={handleContinue}
                         />
                     </>
                 )

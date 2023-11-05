@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     route("", <App />),
     route("create", <RoomSettingsPage />),
     route(":roomCode", <SeatingPage />),
-    route(":roomCode/:seat", <CrossroadsPage />),
+    route(":roomCode/:seat/:card?/:page?", <CrossroadsPage />),
 ])
 
 function route(path: string, element: React.ReactNode) {
