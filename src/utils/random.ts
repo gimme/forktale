@@ -1,7 +1,9 @@
 import seedrandom from "seedrandom"
 
+import { encode } from "@/utils/numberEncode"
+
 export function shuffle<T>(array: T[], seed: string, offset: number): T[] {
-    const r = rand(seed)
+    const r = random(seed)
     let currentIndex = array.length
 
     // While there remain elements to shuffle
@@ -20,7 +22,15 @@ export function shuffle<T>(array: T[], seed: string, offset: number): T[] {
     return array
 }
 
-function rand(seed: string) {
+export function dateEntropy(length: number): string {
+    const date = new Date()
+    if (date.getHours() < 5) date.setDate(date.getDate() - 1)
+    const dateSeed = date.toLocaleDateString("en-US")
+    const entropy = Math.floor(random(dateSeed).next() * Math.pow(32, length))
+    return encode(entropy)
+}
+
+function random(seed: string) {
     let rng = seedrandom(seed)()
     return {
         next() {

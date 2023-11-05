@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
 
-import { Button, Stack } from "@mui/material"
+import { Button, Stack, Typography } from "@mui/material"
 
+import strings from "@/assets/strings"
 import MainContainer from "@/components/MainContainer"
 
 export default function SeatingPage() {
@@ -14,7 +15,10 @@ export default function SeatingPage() {
 
     return (
         <MainContainer>
-            <Stack direction="column" spacing={5} sx={{ width: "100%" }}>
+            <Typography component="h1" variant="h4" align="center">
+                {strings.room.selectSeat}
+            </Typography>
+            <Stack direction="column" spacing={5} sx={{ width: "100%", mt: 5 }}>
                 {[1, 2, 3, 4, 5].map((seat) => (
                     <Button
                         key={seat}

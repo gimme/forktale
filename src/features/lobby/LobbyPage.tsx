@@ -5,17 +5,18 @@ import { Button, Stack, TextField, Typography } from "@mui/material"
 
 import strings from "@/assets/strings"
 import MainContainer from "@/components/MainContainer"
+import { dateEntropy } from "@/utils/random"
 
 export default function LobbyPage() {
     const navigate = useNavigate()
-    const [code, setCode] = useState<string>("")
+    const [joinCode, setJoinCode] = useState<string>("")
 
     const onChangeCode = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setCode(event.target.value)
+        setJoinCode(event.target.value)
     }
 
     const handleJoin = () => {
-        navigate(`/${code}`)
+        navigate(`/${joinCode + dateEntropy(2)}`)
     }
 
     const handleCreate = () => {
@@ -35,20 +36,20 @@ export default function LobbyPage() {
                         id="code"
                         label={strings.common.code}
                         sx={{ textTransform: "capitalize" }}
-                        value={code}
+                        value={joinCode}
                         onChange={onChangeCode}
                     />
                     <Button
                         aria-label={"join"}
-                        variant="outlined"
-                        disabled={!code}
+                        variant="contained"
+                        disabled={!joinCode}
                         onClick={handleJoin}
                     >
                         {strings.common.join}
                     </Button>
                     <Button
                         aria-label={"create"}
-                        variant="contained"
+                        variant="outlined"
                         onClick={handleCreate}
                     >
                         {strings.common.create}

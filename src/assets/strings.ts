@@ -9,4 +9,7 @@ export default {
         join: "join",
         start: "start",
     },
+    room: {
+        selectSeat: "Select your seat",
+    },
 }
