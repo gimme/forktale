@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-import { Button, Container, Stack, TextField } from "@mui/material"
+import { Button, Stack, TextField } from "@mui/material"
 
 import strings from "@/assets/strings"
+import MainContainer from "@/components/MainContainer"
 
 export default function RoomSettingsPage() {
     const navigate = useNavigate()
@@ -14,17 +15,8 @@ export default function RoomSettingsPage() {
     }
 
     return (
-        <Container
-            component="main"
-            maxWidth="xs"
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                minHeight: "100vh",
-            }}
-        >
-            <Stack direction="column" spacing={2}>
+        <MainContainer>
+            <Stack direction="column" spacing={2} sx={{ width: "100%" }}>
                 <TextField margin="normal" fullWidth id="code" value={code} />
                 <Button
                     aria-label={"start"}
@@ -35,6 +27,6 @@ export default function RoomSettingsPage() {
                     {strings.common.start}
                 </Button>
             </Stack>
-        </Container>
+        </MainContainer>
     )
 }

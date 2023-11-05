@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-import { Button, Container, Stack, TextField, Typography } from "@mui/material"
+import { Button, Stack, TextField, Typography } from "@mui/material"
 
 import strings from "@/assets/strings"
+import MainContainer from "@/components/MainContainer"
 
 export default function LobbyPage() {
     const navigate = useNavigate()
@@ -23,17 +24,8 @@ export default function LobbyPage() {
 
     return (
         <>
-            <Container
-                component="main"
-                maxWidth="xs"
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    minHeight: "100vh",
-                }}
-            >
-                <Stack direction="column" spacing={2}>
+            <MainContainer>
+                <Stack direction="column" spacing={2} sx={{ width: "100%" }}>
                     <Typography component="h1" variant="h4" align="center">
                         {strings.app.name}
                     </Typography>
@@ -62,7 +54,7 @@ export default function LobbyPage() {
                         {strings.common.create}
                     </Button>
                 </Stack>
-            </Container>
+            </MainContainer>
         </>
     )
 }

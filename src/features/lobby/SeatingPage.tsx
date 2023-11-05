@@ -1,6 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
 
-import { Button, Container, Stack } from "@mui/material"
+import { Button, Stack } from "@mui/material"
+
+import MainContainer from "@/components/MainContainer"
 
 export default function SeatingPage() {
     const navigate = useNavigate()
@@ -11,17 +13,8 @@ export default function SeatingPage() {
     }
 
     return (
-        <Container
-            component="main"
-            maxWidth="xs"
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                minHeight: "100vh",
-            }}
-        >
-            <Stack direction="column" spacing={5}>
+        <MainContainer>
+            <Stack direction="column" spacing={5} sx={{ width: "100%" }}>
                 {[1, 2, 3, 4, 5].map((seat) => (
                     <Button
                         key={seat}
@@ -34,6 +27,6 @@ export default function SeatingPage() {
                     </Button>
                 ))}
             </Stack>
-        </Container>
+        </MainContainer>
     )
 }

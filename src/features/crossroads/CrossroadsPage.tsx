@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react"
 import { useNavigate, useParams, useSearchParams } from "react-router-dom"
 
-import { CircularProgress, Container } from "@mui/material"
+import { CircularProgress } from "@mui/material"
 
+import MainContainer from "@/components/MainContainer"
 import { shuffle } from "@/utils/random"
 
 import Crossroad from "./Crossroad"
@@ -57,16 +58,7 @@ export function CrossroadsPage() {
     }, [])
 
     return (
-        <Container
-            component="main"
-            maxWidth="sm"
-            sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                minHeight: "100vh",
-            }}
-        >
+        <MainContainer>
             {loading ? (
                 <CircularProgress />
             ) : (
@@ -80,6 +72,6 @@ export function CrossroadsPage() {
                     </>
                 )
             )}
-        </Container>
+        </MainContainer>
     )
 }
