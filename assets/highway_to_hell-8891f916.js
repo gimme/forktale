@@ -1,0 +1,12 @@
+const e=`title: HIGHWAY TO HELL
+trigger: If the player controls a survivor at the colony
+context: You're knocked to the ground as a boom shakes the entire building.
+  "Breach!" someone screams. "Breach!" You find the barricades smashed, and a
+  truck crunched into the building's side. Classic rock blares from the speakers
+  in the cab. The zombie sitting in the driver's seat gnashes its teeth at you
+  before a club obliterates its head. The note pinned to its jacket reveals the
+  culprits  the other colony has sent you a message.
+result: Players may collectively spend 2 action dice. If they do not, add 3
+  zombies to the colony. If they do, gain 1 morale for acquiring some sweet
+  tunes.
+`;export{e as default};

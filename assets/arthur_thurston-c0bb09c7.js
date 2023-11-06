@@ -1,0 +1,19 @@
+const e=`title: ARTHUR THURSTON
+trigger: If the player controls Arthur and he is not exiled
+context: Place Arthur at the school, if able, (this does not count as a move).
+  The school smells musty, and Arthur frowns at this.  It is hard to be here and
+  not let the principal in him take over.  Maybe someday the nightmare will end
+  and he can return and clean the place up.  Suddenly a little pair of hands
+  reaches out from under a desk and grabs hold of his ankles.  He realizes it's
+  a kid, and not  a dead one either.  But the little monster is filthy and feral
+  looking.  Another child's hand snaps out of the darkness and seizes around his
+  left wrist.  And before he can react, they are all over him.
+options:
+  - action: Arthur tries to wrestle free of the kids.
+    result: Add 2 wounds to Arthur.
+  - action: Arthur fires his weapon into the tangle of small bodies.
+    result:
+      The kids scatter, but he tastes warm blood on his lips.  Heaven help me,
+      he thinks.  I was wrong.  Things can never go back to the way they were.
+      Lose 1 morale.
+`;export{e as default};

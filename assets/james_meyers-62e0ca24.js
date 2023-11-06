@@ -1,0 +1,18 @@
+const e=`title: JAMES MEYERS
+trigger: If the player controls James and he is not exiled
+context: '"I can''t help but think my particular skill set is more useful than
+  ever.  Who''s going to help keep our leaders from cracking under the
+  stress?  Who else can identify psychological problems that could impact the
+  colony''s morale?"'
+options:
+  - action: James inventories the medical supplies coming into the colony.
+    result:
+      Look at every player's hand.  You may remove 3 medicine cards from among
+      them to gain 1 morale.  "I'm sorry, but I need to ration these for the
+      most important cases."
+  - action:
+      James has great insight into the motivations of individuals who survive
+      a great crisis.
+    result: Look at any player's secret objective.  You may discuss it with the group.
+noCoop: true
+`;export{e as default};

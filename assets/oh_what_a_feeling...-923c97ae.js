@@ -1,0 +1,26 @@
+const t=`title: OH WHAT A FEELING...
+trigger: If a human survivor the player controls shares a location with a human
+  survivor another player controls and those are the only 2 survivors at that
+  location
+context: The storm is unexpected and so is the company. "We should probably
+  share the blanket, right?" you ask awkwardly. You don't know each other well,
+  but the time has passed pleasantly so far. Your hands brush under the blanket.
+  Your eyes lock. Both players that control a survivor at the location must vote
+  with a thumbs up or down.
+options:
+  - action: Lean in. If both players voted with a thumbs up, this option takes effect.
+    result: You haven't felt this alive in ages. Remove all wound markers and
+      despair tokens from both survivors. Each player controlling one of the
+      survivors rolls a die. The player with the higher roll adds the other
+      player's survivor to their following.
+  - action:
+      Pull back. If both players voted with a thumbs down this option takes
+      effect.
+    result: Nothing happens.
+  - action:
+      If one player voted with a thumbs up (leaned in) and the other with a
+      thumbs down (pulled back), this option takes effect.
+    result: '"What do you think this is?" The player that voted with a thumbs up
+      receives 1 despair token.'
+vote: true
+`;export{t as default};

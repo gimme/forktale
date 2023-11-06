@@ -1,0 +1,14 @@
+const e=`title: CABIN FEVER
+trigger: If there are more non-helpless survivors at the colony than all other
+  locations combined
+context: >-
+  "I swear to God," you say. "If I have to stare at these walls a minute longer,
+  I'm going to freaking snap. I don't care how dangerous it is, I'm getting
+  outside. Never thought I'd feel running from dead people was more desirable
+  than holing up." 
+
+  "That's not a bad idea," your friend agrees. "Why should the zombies be the only ones enjoying the sunshine?".
+result: If at the end of this round there are more non- helpless survivors at
+  the colony than all other locations combined, place 1 despair marker on each
+  survivor at the colony.
+`;export{e as default};

@@ -1,0 +1,24 @@
+const e=`title: KING SHIT OF FUCK HILL
+trigger: If the player does something that another player complains about (the
+  player holding this card is the judge of what is a complaint)
+context: '"You know what? Why don''t you shut the fuck up? I''m tired of your
+  whiny bullshit. Could I just make one move without your unwanted supervision?
+  Who the hell made you president of the goddamn apocalypse? HEY EVERYBODY, WHO
+  WANTS TO MAKE THIS FUCKER PRESIDENT OF CAMP SHIT HOLE?" Every non-exiled
+  player must vote with a thumbs up or down. The option with the most votes
+  takes effect.'
+options:
+  - action: Vote for the fucker.
+    result:
+      '"All hail President Loud Mouth Asshole! Congratu-fucking-lations!" For
+      the remainder of the round, the player that complained may force each
+      player to spend 1 of their action dice in the manner of his choosing.'
+  - action: Vote against the fucker.
+    result: '"Yeah, I didn''t think so!" The player that complained must put a
+      despair token on his leader and that player is not allowed to talk for the
+      remainder of the round. If he does speak, he is immediately exiled without
+      a vote.'
+vote: true
+mature: true
+noCoop: true
+`;export{e as default};

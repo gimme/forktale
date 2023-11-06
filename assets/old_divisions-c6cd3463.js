@@ -1,0 +1,22 @@
+const e=`title: OLD DIVISIONS
+trigger: If a survivor the player controls is at the colony
+context: Fists and curses are flying as you force your way through the crowd to
+  break up an ugly fight.  "What is going on here?" you demand.  "It's him,"
+  snarls one of the combatants, pointing at his opponent.  "I don't know why we
+  let his type in here to begin with.  This place is for good people!"  Your
+  heart sinks as several other voices rise up in agreement.  "In case you
+  haven't noticed, the world as we know it just ended!" you yell.  "The old
+  divisions we knew  they don't mean jack now.  There are just human beings and
+  the things that eat human beings."  Every player with 1 or more survivors at
+  the colony must vote with a thumbs up or down.  The option with the most votes
+  takes effect.
+options:
+  - action: The bigot who started the fight is expelled from the colony.
+    result: Remove 1 helpless survivor. For a while, people work together more
+      efficiently.  Place the current crisis on the bottom of the deck and skip
+      the resolve crisis step this round, but lower morale by 1 as people balk
+      at such a severe reaction.
+  - action: A notice is hung stating that bigotry will be met with exile.
+    result: Nothing happens.
+vote: true
+`;export{e as default};

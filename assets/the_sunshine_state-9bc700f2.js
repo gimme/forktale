@@ -1,0 +1,22 @@
+const e=`title: THE SUNSHINE STATE
+trigger: If the player controls a survivor at the colony and there are 2 or more
+  helpless survivors in the colony
+context: The sun shines brightly, reflecting off the beach's perfect white sands
+  and light blue waters.  "The Sunshine State," declares Harold, shaking the
+  postcard in your face.  "That's where we're headed.  Why should we be fighting
+  both the weather and the dead?  I think the birds have it right.  The wife and
+  I are flying south."
+options:
+  - action:
+      '"Great idea as always Harold."  You open the gates for the old man and
+      his wife.'
+    result:
+      Remove 2 helpless survivor tokens in the colony from the game.  The very
+      next morning they're found at the gates, staring in hungrily at the
+      living.  Lose 1 morale.
+  - action:
+      '"Who''s doing the fighting Harold?  It ain''t either of you.  So leave
+      and die, or stop being an ingrate and shut up." He walks away, but you
+      realize he feels ashamed at having to rely on others.'
+    result: Nothing happens.
+`;export{e as default};

@@ -1,0 +1,16 @@
+const e=`title: ASHLEY ROSS
+trigger: If the player controls Ashley Ross and she is not exiled
+context: You inspect the colony's infrastructure and decide that with some raw
+  materials and effort, you can probably make significant improvements. You
+  gather the survivors together, and lay out your plans.
+options:
+  - action: You construct a series of raised walkways around the perimeter.
+    result:
+      Roll twice for exposure on Ashley Ross.  For the remainder of the game,
+      when attacking zombies at entrance 1, do not roll for exposure
+  - action: You expand the waste storage area.
+    result:
+      Roll once for exposure on Ashley Ross. For the remainder of the game,
+      during the check waste step of the round lose 1 morale for every 15 cards
+      in the waste pile instead of 1 morale for every 10.
+`;export{e as default};

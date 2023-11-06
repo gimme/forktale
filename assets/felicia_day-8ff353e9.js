@@ -1,0 +1,24 @@
+const e=`title: FELICIA DAY
+trigger: If Felicia is in play and she is not exiled, and a chemist, nurse,
+  doctor, or psychiatrist is in play
+context: '"Felicia''s a mess.  Poor thing seems desperate to disassociate
+  herself from the horrible things she''s had to endure.  She was an actress
+  before the world went to hell, and she has some need to act out the role of
+  anyone other than herself. The results are bizarre and often put her and
+  others at great risk.  But what are we prepared to do?" Every non-exiled
+  player must vote with a thumbs up or down.  The option with the most votes
+  take effect.'
+options:
+  - action:
+      '"I''ve made a list of anti-psychotics we may be able to find in local
+      pharmacies or the hospital.  If we can keep her medicated it should calm
+      her down."'
+    result: "Whenever Felicia causes a crossroad card to be triggered add the
+      following option to that card: (Alternate Option - Any player may discard
+      a medicine.  If they do, nothing happens.)"
+  - action:
+      '"We need to get Felicia and her group of supporters out of here.  She
+      is too dangerous."'
+    result: Exile the player who controls Felicia.
+vote: true
+`;export{e as default};

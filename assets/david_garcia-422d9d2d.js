@@ -1,0 +1,19 @@
+const e=`title: DAVID GARCIA
+trigger: If the player controls David Garcia and he is not exiled
+context: Place David at the colony (this does not count as a move).  "My daily
+  inventory of supplies shows that something's off.  Someone in the colony has
+  been secretly stealing supplies.  Furthermore, based on the supplies taken, I
+  don't think they're hoarding supplies but rather plotting the colony's
+  downfall."  The current player looks at 1 random card in each player's hand
+  who controls a survivor at the colony.
+options:
+  - action: '"It''s just as I suspected.  The culprit is right here!"'
+    result:
+      Accuse another player at the colony of stealing and initiate a vote to
+      exile them.
+  - action:
+      '"Oops, I''m sorry, I forgot to carry the 1. I''m usually not prone to
+      such errors. That''s my bad everybody."'
+    result: Nothing happens.
+noCoop: true
+`;export{e as default};

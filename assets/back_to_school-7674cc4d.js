@@ -1,0 +1,26 @@
+const o=`title: BACK TO SCHOOL
+trigger: If Eric Parker and at least 1 other survivor are at the school
+context: Through a set of open double doors you spot a raggedly dressed man
+  climbing the stairs. "I know that dude," Eric whispers. "Got arrested here a
+  couple years ago. Why the hell is he hanging around here now?" Eric is too
+  curious to back off, and so you take the stairs to the second floor. You find
+  him in the first classroom at the top of the stairs, a dozen growling dead
+  children lashed to their desks. Every player that controls a survivor at the
+  school must vote with a thumbs up or down. The option that receives the most
+  votes takes effect.
+options:
+  - action:
+      '"This isn''t what it looks like!" he insists.  "So you aren''t playing
+      school with a bunch of dead kids?" Eric asks. You rush him as a group,
+      pushing him into the gnashing jaws of his victims.'
+    result:
+      Remove 1 despair token from each survivor at the school, roll exposure
+      on each of those survivors, and place them in the colony (this is not a
+      move).
+  - action:
+      Another day, another reminder of human ugliness. You leave the disturbed
+      man to his game.
+    result: Place 1 despair token on each survivor at the school.
+vote: true
+mature: true
+`;export{o as default};

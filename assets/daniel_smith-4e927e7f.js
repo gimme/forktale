@@ -1,0 +1,19 @@
+const e=`title: DANIEL SMITH
+trigger: If the player controls Daniel and there is at least 1 helpless survivor
+  at the colony
+context: One of the helpless survivors is found murdered, apparently for an
+  unlabeled can of food.  Remove 1 helpless survivor from the game.
+options:
+  - action:
+      The murder launches Daniel back into detective mode, and he identifies
+      the killer through interviews and basic investigative techniques.
+    result:
+      Spend 1 unused action die. Choose a survivor. Place the chosen survivor
+      at the police station (this does not count as a move).  Return all cards
+      equipped to the survivor to its controlling player's hand.  That survivor
+      cannot move, search, attack, or use its ability for the remainder of the
+      game.
+  - action: There is no law anymore, and Daniel watches the colony succumb to
+      panic.  He doesn't say it, but he really doesn't care.
+    result: Lose 1 morale.
+`;export{e as default};

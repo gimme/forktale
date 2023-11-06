@@ -1,0 +1,19 @@
+const e=`title: ROD MILLER
+trigger: If Rod is in play
+context: Everybody knows the signs, but Rod finds it strange to experience them
+  firsthand.  The pain in his left arm isn't sharp so much as it's icy, and it
+  radiates from his fingers all the way into his chest.  "Gonna be okay," he
+  gasps to the others before collapsing.  The Ghost of Truck Stop Meals Past
+  swims past his eyes, and even as he fights for life, the cynic in him figures
+  it's better to die from mac 'n cheese than zombies.
+options:
+  - action: '"I saw a defibrillator at the hospital the last time we were
+      there.  We''re going to have to carry him."'
+    result: Place 2 survivors you control and Rod at the Hospital (this does not
+      count as a move). Roll for exposure on Rod and both of those survivors 2
+      times each.  If there is not enough room at the hospital to do this, you
+      may place any survivors currently at the hospital back at the colony (this
+      does not count as a move).
+  - action: '"There''s not much we can do for him but hope he survives this."'
+    result: Kill Rod.
+`;export{e as default};

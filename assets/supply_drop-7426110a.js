@@ -1,0 +1,23 @@
+const e=`title: SUPPLY DROP
+trigger: If a survivor the player controls is at the colony
+context: You lived near the airport when you were a kid, and used to climb up on
+  the roof of your house to watch the planes take off.  When one passed overhead
+  you'd cheer as the displaced air whipped over your body.  Just like right
+  now.  Wait, what?  You snap awake and fall out of your lawn chair.  An immense
+  plane, like something from an old war movie, roars overhead before disgorging
+  what looks like a crate.  An orange parachute pops open, carrying the crate to
+  safety  and away from the colony.
+options:
+  - action:
+      '"Someone knows we''re here.  There''s no way this is random.  We have to
+      find that crate!"'
+    result:
+      Choose a survivor you control and roll for exposure on that survivor 3
+      times.  If they aren't killed by that exposure, add 5 food to the supply.
+      "The container had Chinese or something stenciled on it.  It wasn't our
+      government that made the drop, that's for sure."  If Annaleigh Chan is in
+      play, she is able to translate the text.  The Chinese government is still
+      intact and is trying to provide relief efforts.  Gain 1 morale.
+  - action: It's not worth the risk.
+    result: Nothing happens.
+`;export{e as default};

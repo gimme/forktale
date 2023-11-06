@@ -1,0 +1,18 @@
+const n=`title: MUSIC
+trigger: If the player makes a search action with a non-exiled survivor
+context: You laugh as you push the ruined shelves aside, revealing a guitar
+  case.  Inside you find an acoustic guitar in wonderful condition.  You sit
+  down with it and holding your breath, give it a strum.  You wince at the
+  noise, but after a few minutes of tuning, the notes that come from the
+  instrument are enough to make tears form in your eyes.
+options:
+  - action: That evening, as things quiet down at the colony, you pull out your
+      newfound prize and play.  Your song soothes those present, and serves as a
+      reminder that there is more to being human than just surviving.
+    result: Gain 1 morale.
+  - action:
+      The next morning as the people rise for their morning meal, you play an
+      old spiritual that speaks of hope, and the good things that wait beyond
+      all hardship and pain.
+    result: All players roll an extra action die at the beginning of the next round.
+`;export{n as default};

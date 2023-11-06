@@ -1,0 +1,16 @@
+const e=`title: RIOT
+trigger: If the player controls a survivor at the colony and there are more
+  helpless survivors in the colony than non-helpless survivors
+context: '"They don''t care that we''re starving!   I can feel my ribs, yet that
+  pantry door is locked up tight.  Why?  We need food.  Well I don''t care what
+  those scum bags say  there''s way more of us than them.  I say we break that
+  door down, and if any of them get in our way, well it''s their choice if things
+  turn ugly."'
+options:
+  - action: You let the rioters into the pantry.
+    result: Remove all food in the supply.
+  - action: You defend the pantry.
+    result: Each non-helpless survivor at the colony receives 1 wound.
+  - action: You make an example of one of the rioters.
+    result: Kill 1 helpless survivor.
+`;export{e as default};
