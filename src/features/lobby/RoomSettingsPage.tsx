@@ -13,7 +13,7 @@ export default function RoomSettingsPage() {
     const [joinCode, setJoinCode] = useState<string>("")
 
     useEffect(() => {
-        setJoinCode(encode(Math.floor(Math.random() * Math.pow(32, 2))))
+        setJoinCode(encode(Math.floor(Math.random() * Math.pow(32, 2)), 2))
     }, [])
 
     const handleStart = () => {

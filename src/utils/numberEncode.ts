@@ -5,11 +5,13 @@ const base = charSet.length
  * Encodes a number into a shorter string.
  *
  * @param number The number to encode.
+ * @param minLength The minimum length of the encoded string.
  */
-export function encode(number: number): string {
+export function encode(number: number, minLength?: number): string {
     return number
         .toString(base)
         .replace(/./g, (c) => charSet[parseInt(c, base)])
+        .padStart(minLength ?? 0, charSet[0])
 }
 
 /**
