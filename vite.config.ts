@@ -9,4 +9,6 @@ export default defineConfig({
             "@": "/src",
         },
     },
+    base: "/forktale/",
+    appType: "mpa",
 })
