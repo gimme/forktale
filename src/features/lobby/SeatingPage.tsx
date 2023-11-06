@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 import WarningAmberOutlinedIcon from "@mui/icons-material/WarningAmberOutlined"
@@ -5,6 +6,7 @@ import { Button, Stack, Typography } from "@mui/material"
 
 import strings from "@/assets/strings"
 import MainContainer from "@/components/MainContainer"
+import { loadCrossroads } from "@/features/crossroads/cardStore"
 
 export default function SeatingPage() {
     const navigate = useNavigate()
@@ -13,6 +15,12 @@ export default function SeatingPage() {
     const handleSelectSeat = (seat: number) => {
         navigate(`/${roomCode}/${seat}`)
     }
+
+    useEffect(() => {
+        loadCrossroads().catch((e) => {
+            console.error(e)
+        })
+    }, [])
 
     return (
         <MainContainer>
