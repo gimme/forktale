@@ -12,7 +12,7 @@ export default function LobbyPage() {
     const [joinCode, setJoinCode] = useState<string>("")
 
     const onChangeCode = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setJoinCode(event.target.value)
+        setJoinCode(event.target.value.toLowerCase())
     }
 
     const handleJoin = () => {
