@@ -1,21 +1,30 @@
 import { blue, purple } from "@mui/material/colors"
 import { createTheme } from "@mui/material/styles"
 
+export const getTheme = (darkMode?: boolean) =>
+    darkMode ? darkTheme : lightTheme
+
 // A custom theme for this app
-const theme = createTheme({
+const lightTheme = createTheme({
     palette: {
-        mode: "dark",
+        mode: "light",
         primary: {
-            main: blue[200],
-            light: blue[50],
-            dark: blue[400],
+            main: blue[500],
         },
         secondary: {
-            main: purple["200"],
-            light: purple["50"],
-            dark: purple["400"],
+            main: purple[500],
         },
     },
 })
 
-export default theme
+const darkTheme = createTheme({
+    palette: {
+        mode: "dark",
+        primary: {
+            main: blue[200],
+        },
+        secondary: {
+            main: purple[200],
+        },
+    },
+})
