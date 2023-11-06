@@ -54,8 +54,10 @@ export function CrossroadsPage() {
             ? crossroads[currentCardIndex]
             : null
 
-    const nextCard = () => {
-        navigate(`/${roomCode}/${seat}/${currentCardIndex + 2}`)
+    const nextCard = (replace?: boolean) => {
+        navigate(`/${roomCode}/${seat}/${currentCardIndex + 2}`, {
+            replace: replace,
+        })
     }
     const setCardPage = (page: CardPage | null) => {
         navigate(
@@ -71,7 +73,7 @@ export function CrossroadsPage() {
         if (currentPage === null) setCardPage("trigger")
         if (currentPage === "trigger") setCardPage("context")
         if (currentPage === "context") setCardPage("result")
-        if (currentPage === "result") nextCard()
+        if (currentPage === "result") nextCard(true)
     }
 
     useEffect(() => {
