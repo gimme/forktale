@@ -12,7 +12,10 @@ const router = createRouter(
         route("/", <LobbyPage />),
         route("/create", <RoomSettingsPage />),
         route("/:roomCode", <SeatingPage />),
-        route("/:roomCode/:seat/:card?/:page?", <CrossroadsPageWrapper />),
+        route(
+            "/:roomCode/:seat/:card?/:page?/:option?",
+            <CrossroadsPageWrapper />,
+        ),
     ],
     { basename: "/forktale" },
 )

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useNavigate } from "react-router-dom"
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
@@ -18,32 +18,31 @@ import {
 
 import strings from "@/assets/strings"
 
-import Crossroad, { CrossroadOption } from "./Crossroad"
+import Crossroad from "./Crossroad"
 
 export type CardPage = "trigger" | "context" | "result"
 
 type Props = {
     crossroad: Crossroad
     page: CardPage | null
+    option?: number
     onDiscard: () => void
     onContinue: () => void
+    onOption: (option?: number) => void
 }
 
 export default function CrossroadCard(props: Props) {
     const navigate = useNavigate()
-    const [chosenOption, setChosenOption] = useState<null | CrossroadOption>(
-        null,
-    )
 
     const crossroad = props.crossroad
+    const chosenOption = props.option
+        ? crossroad.options?.[props.option - 1]
+        : undefined
 
     const handleDiscard = () => props.onDiscard()
     const handleBack = () => navigate(-1)
     const handleContinue = () => props.onContinue()
-    const handleOption = (option: CrossroadOption) => {
-        setChosenOption(option)
-        handleContinue()
-    }
+    const handleOption = (option?: number) => props.onOption(option)
 
     const ContinueButton = () => {
         return (
@@ -87,10 +86,6 @@ export default function CrossroadCard(props: Props) {
         )
     }
 
-    useEffect(() => {
-        setChosenOption(null)
-    }, [props.crossroad])
-
     return (
         <>
             <Card sx={{ maxWidth: "400px", width: "100%", padding: 1 }}>
@@ -133,7 +128,7 @@ export default function CrossroadCard(props: Props) {
                                             aria-label={`option-${i + 1}`}
                                             variant="outlined"
                                             key={i}
-                                            onClick={() => handleOption(option)}
+                                            onClick={() => handleOption(i + 1)}
                                             sx={{
                                                 marginTop: 2.5,
                                                 textTransform: "none",
@@ -146,7 +141,9 @@ export default function CrossroadCard(props: Props) {
                                         <Button
                                             aria-label="continue"
                                             variant="outlined"
-                                            onClick={handleContinue}
+                                            onClick={() =>
+                                                handleOption(undefined)
+                                            }
                                             sx={{ marginTop: 2.5 }}
                                         >
                                             {strings.common.continue}

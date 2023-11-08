@@ -12,7 +12,7 @@ import { getCrossroads, loadCrossroads } from "./cardStore"
 
 export function CrossroadsPageWrapper() {
     const navigate = useNavigate()
-    const { roomCode, seat, card, page } = useParams()
+    const { roomCode, seat, card, page, option } = useParams()
 
     const seatInt = parseInt(seat ?? "")
     const cardInt = parseInt(card ?? "")
@@ -20,16 +20,52 @@ export function CrossroadsPageWrapper() {
         page === "trigger" || page === "context" || page === "result"
             ? page
             : null
+    const optionInt = option ? parseInt(option) : undefined
+
+    function isPositiveInteger(value: number) {
+        return !isNaN(value) && value > 0 && value % 1 === 0
+    }
+
+    const isValidSeat = isPositiveInteger(seatInt)
+    const isValidCard = isPositiveInteger(cardInt)
+    const isValidPage = !(cardPage === null && page !== undefined)
+    const isValidOption = !(
+        cardPage === "result" &&
+        optionInt !== undefined &&
+        !isPositiveInteger(optionInt)
+    )
 
     useEffect(() => {
-        if (isNaN(seatInt)) navigate(`/${roomCode}`, { replace: true })
-        else if (isNaN(cardInt))
+        if (!isValidSeat) navigate(`/${roomCode}`, { replace: true })
+        else if (!isValidCard)
             navigate(`/${roomCode}/${seat}/1`, { replace: true })
-        else if (cardPage === null && page !== undefined)
+        else if (!isValidPage)
             navigate(`/${roomCode}/${seat}/${card}`, { replace: true })
-    }, [card, cardInt, cardPage, navigate, page, roomCode, seat, seatInt])
+        else if (!isValidOption)
+            navigate(`/${roomCode}/${seat}/${card}/context`, { replace: true })
+    }, [
+        card,
+        cardInt,
+        cardPage,
+        isValidCard,
+        isValidOption,
+        isValidPage,
+        isValidSeat,
+        navigate,
+        optionInt,
+        page,
+        roomCode,
+        seat,
+        seatInt,
+    ])
 
-    if (!roomCode || isNaN(seatInt) || isNaN(cardInt) || cardPage === undefined)
+    if (
+        !roomCode ||
+        !isValidSeat ||
+        !isValidCard ||
+        !isValidPage ||
+        !isValidOption
+    )
         return null
     return (
         <CrossroadsPage
@@ -37,6 +73,7 @@ export function CrossroadsPageWrapper() {
             seat={seatInt}
             card={cardInt}
             page={cardPage}
+            option={optionInt}
         />
     )
 }
@@ -46,10 +83,11 @@ type Props = {
     seat: number
     card: number
     page: CardPage | null
+    option?: number
 }
 
 function CrossroadsPage(props: Props) {
-    const { roomCode, seat, card, page } = props
+    const { roomCode, seat, card, page, option } = props
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
 
@@ -68,17 +106,11 @@ function CrossroadsPage(props: Props) {
             ? crossroads[currentCardIndex]
             : null
 
-    const nextCard = (replace?: boolean) => {
-        navigate(`/${roomCode}/${seat}/${card + 1}`, {
-            replace: replace,
-        })
+    const nextCard = () => {
+        navigate(`/${roomCode}/${seat}/${card + 1}`)
     }
     const setCardPage = (page: CardPage | null) => {
-        navigate(
-            `/${roomCode}/${seat}/${currentCardIndex + 1}${
-                page ? `/${page}` : ""
-            }`,
-        )
+        navigate(`/${roomCode}/${seat}/${card}${page ? `/${page}` : ""}`)
     }
     const handleDiscard = () => {
         nextCard()
@@ -86,8 +118,12 @@ function CrossroadsPage(props: Props) {
     const handleContinue = () => {
         if (page === null) setCardPage("trigger")
         if (page === "trigger") setCardPage("context")
-        if (page === "context") setCardPage("result")
-        if (page === "result") nextCard(true)
+        if (page === "result") nextCard()
+    }
+    const handleOption = (option?: number) => {
+        navigate(
+            `/${roomCode}/${seat}/${card}/result${option ? `/${option}` : ""}`,
+        )
     }
 
     useEffect(() => {
@@ -116,8 +152,10 @@ function CrossroadsPage(props: Props) {
                         <CrossroadCard
                             crossroad={crossroad}
                             page={page}
+                            option={option}
                             onDiscard={handleDiscard}
                             onContinue={handleContinue}
+                            onOption={handleOption}
                         />
                     </>
                 )
