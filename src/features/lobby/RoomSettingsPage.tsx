@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import { Button, Stack, TextField } from "@mui/material"
 
 import strings from "@/assets/strings"
 import MainContainer from "@/components/MainContainer"
-import { encode } from "@/utils/numberEncode"
+import { randomEncoded } from "@/utils/numberEncode"
 import { dateEntropy } from "@/utils/random"
 
 export default function RoomSettingsPage() {
     const navigate = useNavigate()
-    const [joinCode, setJoinCode] = useState<string>("")
+    const [joinCode] = useState<string>(randomEncoded(2))
 
-    useEffect(() => {
-        setJoinCode(encode(Math.floor(Math.random() * Math.pow(32, 2)), 2))
-    }, [])
-
-    const handleStart = () => {
+    function handleStart() {
         navigate(`/${joinCode + dateEntropy(2)}`)
     }
 

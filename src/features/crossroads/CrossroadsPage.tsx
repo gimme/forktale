@@ -10,40 +10,54 @@ import Crossroad from "./Crossroad"
 import CrossroadCard, { CardPage } from "./CrossroadCard"
 import { getCrossroads, loadCrossroads } from "./cardStore"
 
-export function CrossroadsPage() {
+export function CrossroadsPageWrapper() {
     const navigate = useNavigate()
     const { roomCode, seat, card, page } = useParams()
-    const [loading, setLoading] = useState<boolean>(false)
 
-    const validateSeatIndex = (): number => {
-        const seatNumber = parseInt(seat ?? "")
-        if (isNaN(seatNumber) || seatNumber < 1)
-            navigate(`/${roomCode}`, { replace: true })
-        return seatNumber - 1
-    }
-    const validateCardIndex = (): number => {
-        const cardNumber = parseInt(card ?? "")
-        if (isNaN(cardNumber) || cardNumber < 1)
+    const seatInt = parseInt(seat ?? "")
+    const cardInt = parseInt(card ?? "")
+    const cardPage: CardPage | null =
+        page === "trigger" || page === "context" || page === "result"
+            ? page
+            : null
+
+    useEffect(() => {
+        if (isNaN(seatInt)) navigate(`/${roomCode}`, { replace: true })
+        else if (isNaN(cardInt))
             navigate(`/${roomCode}/${seat}/1`, { replace: true })
-        return cardNumber - 1
-    }
-    const validatePage = (): CardPage | null => {
-        if (page === "trigger") return "trigger"
-        if (page === "context") return "context"
-        if (page === "result") return "result"
-        if (page == null) return null
+        else if (cardPage === null && page !== undefined)
+            navigate(`/${roomCode}/${seat}/${card}`, { replace: true })
+    }, [card, cardInt, cardPage, navigate, page, roomCode, seat, seatInt])
 
-        navigate(`/${roomCode}/${seat}/${card}`, { replace: true })
+    if (!roomCode || isNaN(seatInt) || isNaN(cardInt) || cardPage === undefined)
         return null
-    }
+    return (
+        <CrossroadsPage
+            roomCode={roomCode}
+            seat={seatInt}
+            card={cardInt}
+            page={cardPage}
+        />
+    )
+}
 
-    const seatIndex = validateSeatIndex()
-    const currentCardIndex = validateCardIndex()
-    const currentPage = validatePage()
+type Props = {
+    roomCode: string
+    seat: number
+    card: number
+    page: CardPage | null
+}
+
+function CrossroadsPage(props: Props) {
+    const { roomCode, seat, card, page } = props
+    const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
+
+    const seatIndex = seat - 1
+    const currentCardIndex = card - 1
 
     const baseCrossroads = getCrossroads("dow/base")
     const crossroads: Crossroad[] = useMemo(() => {
-        if (!roomCode || seatIndex == null) return []
         const offset = seatIndex * (baseCrossroads.length / 5)
         const extraEntropy = seatIndex < 5 ? "" : Math.floor(seatIndex / 5)
         return shuffle(baseCrossroads, roomCode + extraEntropy, offset)
@@ -55,7 +69,7 @@ export function CrossroadsPage() {
             : null
 
     const nextCard = (replace?: boolean) => {
-        navigate(`/${roomCode}/${seat}/${currentCardIndex + 2}`, {
+        navigate(`/${roomCode}/${seat}/${card + 1}`, {
             replace: replace,
         })
     }
@@ -70,10 +84,10 @@ export function CrossroadsPage() {
         nextCard()
     }
     const handleContinue = () => {
-        if (currentPage === null) setCardPage("trigger")
-        if (currentPage === "trigger") setCardPage("context")
-        if (currentPage === "context") setCardPage("result")
-        if (currentPage === "result") nextCard(true)
+        if (page === null) setCardPage("trigger")
+        if (page === "trigger") setCardPage("context")
+        if (page === "context") setCardPage("result")
+        if (page === "result") nextCard(true)
     }
 
     useEffect(() => {
@@ -101,7 +115,7 @@ export function CrossroadsPage() {
                     <>
                         <CrossroadCard
                             crossroad={crossroad}
-                            page={currentPage}
+                            page={page}
                             onDiscard={handleDiscard}
                             onContinue={handleContinue}
                         />

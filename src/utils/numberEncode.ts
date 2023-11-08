@@ -31,6 +31,10 @@ export function decode(encoded: string): number {
     return parseInt(decoded, base)
 }
 
+export function randomEncoded(length: number): string {
+    return encode(Math.floor(Math.random() * Math.pow(base, length)), length)
+}
+
 /**
  * Common typos in encoded strings.
  */
