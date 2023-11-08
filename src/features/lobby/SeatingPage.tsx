@@ -13,7 +13,7 @@ export default function SeatingPage() {
     const { roomCode } = useParams()
 
     const handleSelectSeat = (seat: number) => {
-        navigate(`/${roomCode}/${seat}`)
+        navigate(`/${roomCode}/${seat}/1`)
     }
 
     useEffect(() => {

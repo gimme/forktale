@@ -11,69 +11,19 @@ import CrossroadCard, { CardPage } from "./CrossroadCard"
 import { getCrossroads, loadCrossroads } from "./cardStore"
 
 export function CrossroadsPageWrapper() {
-    const navigate = useNavigate()
     const { roomCode, seat, card, page, option } = useParams()
 
-    const seatInt = parseInt(seat ?? "")
-    const cardInt = parseInt(card ?? "")
-    const cardPage: CardPage | null =
-        page === "trigger" || page === "context" || page === "result"
-            ? page
-            : null
-    const optionInt = option ? parseInt(option) : undefined
-
-    function isPositiveInteger(value: number) {
-        return !isNaN(value) && value > 0 && value % 1 === 0
-    }
-
-    const isValidSeat = isPositiveInteger(seatInt)
-    const isValidCard = isPositiveInteger(cardInt)
-    const isValidPage = !(cardPage === null && page !== undefined)
-    const isValidOption = !(
-        cardPage === "result" &&
-        optionInt !== undefined &&
-        !isPositiveInteger(optionInt)
-    )
-
-    useEffect(() => {
-        if (!isValidSeat) navigate(`/${roomCode}`, { replace: true })
-        else if (!isValidCard)
-            navigate(`/${roomCode}/${seat}/1`, { replace: true })
-        else if (!isValidPage)
-            navigate(`/${roomCode}/${seat}/${card}`, { replace: true })
-        else if (!isValidOption)
-            navigate(`/${roomCode}/${seat}/${card}/context`, { replace: true })
-    }, [
-        card,
-        cardInt,
-        cardPage,
-        isValidCard,
-        isValidOption,
-        isValidPage,
-        isValidSeat,
-        navigate,
-        optionInt,
-        page,
-        roomCode,
-        seat,
-        seatInt,
-    ])
-
-    if (
-        !roomCode ||
-        !isValidSeat ||
-        !isValidCard ||
-        !isValidPage ||
-        !isValidOption
-    )
-        return null
     return (
         <CrossroadsPage
-            roomCode={roomCode}
-            seat={seatInt}
-            card={cardInt}
-            page={cardPage}
-            option={optionInt}
+            roomCode={roomCode!}
+            seat={parseInt(seat!)}
+            card={parseInt(card!)}
+            page={
+                page === "trigger" || page === "context" || page === "result"
+                    ? page
+                    : null
+            }
+            option={option ? parseInt(option) : undefined}
         />
     )
 }
